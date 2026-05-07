@@ -23,18 +23,6 @@ EXAMPLE_PROMPT = {
     "t2v-1.3B": {
         "prompt": "Two anthropomorphic cats in comfy boxing gear and bright gloves fight intensely on a spotlighted stage.",
     },
-    "t2v-14B": {
-        "prompt": "Two anthropomorphic cats in comfy boxing gear and bright gloves fight intensely on a spotlighted stage.",
-    },
-    "t2i-14B": {
-        "prompt": "一个朴素端庄的美人",
-    },
-    "i2v-14B": {
-        "prompt":
-            "Summer beach vacation style, a white cat wearing sunglasses sits on a surfboard. The fluffy-furred feline gazes directly at the camera with a relaxed expression. Blurred beach scenery forms the background featuring crystal-clear waters, distant green hills, and a blue sky dotted with white clouds. The cat assumes a naturally relaxed posture, as if savoring the sea breeze and warm sunlight. A close-up shot highlights the feline's intricate details and the refreshing atmosphere of the seaside.",
-        "image":
-            "examples/i2v_input.JPG",
-    },
 }
 
 
@@ -44,23 +32,15 @@ def _validate_args(args):
     assert args.task in WAN_CONFIGS, f"Unsupport task: {args.task}"
     assert args.task in EXAMPLE_PROMPT, f"Unsupport task: {args.task}"
 
-    # The default sampling steps are 40 for image-to-video tasks and 50 for text-to-video tasks.
+    # Standard FlowTrack setting for text-to-video editing.
     if args.sample_steps is None:
-        args.sample_steps = 40 if "i2v" in args.task else 50
-
+        args.sample_steps = 50
 
     if args.sample_shift is None:
         args.sample_shift = 5.0
-        if "i2v" in args.task and args.size in ["832*480", "480*832"]:
-            args.sample_shift = 3.0
 
-    # The default number of frames are 1 for text-to-image tasks and 81 for other tasks.
     if args.frame_num is None:
-        args.frame_num = 1 if "t2i" in args.task else 81
-
-    # T2I frame_num check
-    if "t2i" in args.task:
-        assert args.frame_num == 1, f"Unsupport frame_num {args.frame_num} for task {args.task}"
+        args.frame_num = 81
 
     args.base_seed = args.base_seed if args.base_seed >= 0 else random.randint(
         0, sys.maxsize)
@@ -120,26 +100,26 @@ def _validate_args(args):
 
 def _parse_args():
     parser = argparse.ArgumentParser(
-        description="Generate a image or video from a text prompt or image using Wan"
+        description="Run FlowTrack video editing with a Wan text-to-video model."
     )
     parser.add_argument(
         "--task",
         type=str,
-        default="t2v-14B",
+        default="t2v-1.3B",
         choices=list(WAN_CONFIGS.keys()),
-        help="The task to run.")
+        help="Model configuration to use.")
     parser.add_argument(
         "--size",
         type=str,
         default="1280*720",
         choices=list(SIZE_CONFIGS.keys()),
-        help="The area (width*height) of the generated video. For the I2V task, the aspect ratio of the output video will follow that of the input image."
+        help="Output size for single-video editing."
     )
     parser.add_argument(
         "--frame_num",
         type=int,
         default=None,
-        help="How many frames to sample from a image or video. The number should be 4n+1"
+        help=argparse.SUPPRESS,
     )
     parser.add_argument(
         "--ckpt_dir",
@@ -150,123 +130,123 @@ def _parse_args():
         "--offload_model",
         type=str2bool,
         default=None,
-        help="Whether to offload the model to CPU after each model forward, reducing GPU memory usage."
+        help=argparse.SUPPRESS,
     )
     parser.add_argument(
         "--ulysses_size",
         type=int,
         default=1,
-        help="The size of the ulysses parallelism in DiT.")
+        help=argparse.SUPPRESS)
     parser.add_argument(
         "--ring_size",
         type=int,
         default=1,
-        help="The size of the ring attention parallelism in DiT.")
+        help=argparse.SUPPRESS)
     parser.add_argument(
         "--t5_fsdp",
         action="store_true",
         default=False,
-        help="Whether to use FSDP for T5.")
+        help=argparse.SUPPRESS)
     parser.add_argument(
         "--t5_cpu",
         action="store_true",
         default=False,
-        help="Whether to place T5 model on CPU.")
+        help=argparse.SUPPRESS)
     parser.add_argument(
         "--dit_fsdp",
         action="store_true",
         default=False,
-        help="Whether to use FSDP for DiT.")
+        help=argparse.SUPPRESS)
     parser.add_argument(
         "--data_dir",
         type=str,
         default="data",
-        help="The file to save the video needed to be edited.")
+        help="Directory containing source videos.")
     parser.add_argument(
         "--save_dir",
         type=str,
         default="outputs",
-        help="The file to save the generated image or video to.")
+        help="Directory for edited videos.")
     parser.add_argument(
         "--save_file",
         type=str,
         default=None,
-        help="The file to save the generated image or video to.")
+        help=argparse.SUPPRESS)
     parser.add_argument(
         "--log_file",
         type=str,
         default=None,
-        help="Optional path to save stdout-level runtime logs.")
+        help=argparse.SUPPRESS)
     parser.add_argument(
         "--prompt",
         type=str,
         default=None,
-        help="The prompt to generate the image or video from.")
+        help="Source prompt for single-video editing.")
     parser.add_argument(
         "--tgt_prompt",
         type=str,
         default=None,
-        help="The prompt to generate the image or video from.")
+        help="Target prompt for single-video editing.")
     parser.add_argument(
         "--use_prompt_extend",
         action="store_true",
         default=False,
-        help="Whether to use prompt extend.")
+        help=argparse.SUPPRESS)
     parser.add_argument(
         "--prompt_extend_method",
         type=str,
         default="local_qwen",
         choices=["dashscope", "local_qwen"],
-        help="The prompt extend method to use.")
+        help=argparse.SUPPRESS)
     parser.add_argument(
         "--prompt_extend_model",
         type=str,
         default=None,
-        help="The prompt extend model to use.")
+        help=argparse.SUPPRESS)
     parser.add_argument(
         "--prompt_extend_target_lang",
         type=str,
         default="ch",
         choices=["ch", "en"],
-        help="The target language of prompt extend.")
+        help=argparse.SUPPRESS)
     parser.add_argument(
         "--base_seed",
         type=int,
         default=-1,
-        help="The seed to use for generating the image or video.")
+        help="Random seed. If negative, a random seed is used.")
     parser.add_argument(
         "--image",
         type=str,
         default=None,
-        help="The image to generate the video from.")
+        help=argparse.SUPPRESS)
     parser.add_argument(
         "--sample_solver",
         type=str,
         default='unipc',
         choices=['unipc', 'dpm++'],
-        help="The solver used to sample.")
+        help=argparse.SUPPRESS)
     parser.add_argument(
-        "--sample_steps", type=int, default=None, help="The sampling steps.")
+        "--sample_steps", type=int, default=None, help="Number of sampling steps.")
     parser.add_argument(
         "--sample_shift",
         type=float,
         default=None,
-        help="Sampling shift factor for flow matching schedulers.")
+        help=argparse.SUPPRESS)
     parser.add_argument(
         "--sample_guide_scale",
         type=float,
         default=5.0,
-        help="Classifier free guidance scale.")
+        help=argparse.SUPPRESS)
     parser.add_argument(
         "--tgt_guide_scale",
         type=float,
         default=10.0,
-        help="Target guidance scale for velocity-difference editing.")
+        help=argparse.SUPPRESS)
     parser.add_argument(
         "--skip_timesteps",
         type=int,
         default=16,
-        help="Skip timesteps before enabling differential editing.")
+        help=argparse.SUPPRESS)
     parser.add_argument(
         "--use_prior_region",
         type=str2bool,

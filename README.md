@@ -20,7 +20,7 @@ Example command:
 
 ```bash
 python edit.py \
-  --task t2v-14B \
+  --task t2v-1.3B \
   --ckpt_dir /path/to/wan/checkpoints \
   --FiVE_dataset_json /path/to/edit_prompt.json \
   --data_dir /path/to/source/videos \
