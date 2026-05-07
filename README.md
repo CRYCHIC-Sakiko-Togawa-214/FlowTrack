@@ -29,13 +29,6 @@ python edit.py \
   --flowtrack_lambda 0.20
 ```
 
-Useful ablation flags:
-
-```bash
---flowtrack_memory_mode {pre,none}
---flowtrack_state_mode {otsu,none,uniform}
-```
-
 ## Notes
 
 - The code is training-free and does not finetune the pretrained generator.
