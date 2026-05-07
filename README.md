@@ -5,7 +5,6 @@ This directory contains the anonymous-review implementation used for FlowTrack e
 ## Structure
 
 - `edit.py`: main entry point for video editing and FiVE-Bench style batch evaluation.
-- `text2video.py`: compatibility import for the text-to-video pipeline.
 - `wan/text2video.py`: Wan text-to-video editing pipeline with the FlowTrack execution controller.
 - `wan/configs/`: model and inference configuration files.
 - `wan/modules/`: model, VAE, tokenizer, CLIP, and T5 modules.
