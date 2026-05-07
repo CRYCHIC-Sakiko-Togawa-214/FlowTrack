@@ -33,5 +33,3 @@ python edit.py \
 
 - The code is training-free and does not finetune the pretrained generator.
 - Paths in the example command are placeholders; use local paths for checkpoints, datasets, and outputs.
-- Runtime logs and generated videos are written under the user-specified output directory.
-- Keep generated logs, outputs, checkpoints, and datasets out of the repository.
