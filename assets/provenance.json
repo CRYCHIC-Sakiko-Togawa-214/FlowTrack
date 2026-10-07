@@ -1,0 +1,2620 @@
+[
+  {
+    "original": "it2v_edit_zjl/videos/0081_A_horse.mp4",
+    "web": "assets/videos/beach-zebra-source.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 832,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "81"
+        }
+      ],
+      "format": {
+        "duration": "5.063000",
+        "size": "3517529"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 832,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "81"
+        }
+      ],
+      "format": {
+        "duration": "5.063000",
+        "size": "735101"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/nips/FlowTrack/FlowTrack/edit1/0081_A_horse/1_A zebra is galloping.mp4",
+    "web": "assets/videos/beach-zebra-ours.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 832,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "81"
+        }
+      ],
+      "format": {
+        "duration": "5.063000",
+        "size": "3856825"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 832,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "81"
+        }
+      ],
+      "format": {
+        "duration": "5.063000",
+        "size": "783581"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/nips/model_result/videos/FlowDirector/0081_A_horse/1_A zebra is galloping.mp4",
+    "web": "assets/videos/beach-zebra-baseline.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 832,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "81"
+        }
+      ],
+      "format": {
+        "duration": "5.063000",
+        "size": "4023730"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 832,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "81"
+        }
+      ],
+      "format": {
+        "duration": "5.063000",
+        "size": "877838"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/videos/0042_gym-ball.mp4",
+    "web": "assets/videos/gym-panda-source.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "69"
+        }
+      ],
+      "format": {
+        "duration": "4.313000",
+        "size": "326565"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "69"
+        }
+      ],
+      "format": {
+        "duration": "4.313000",
+        "size": "333462"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/nips/FlowTrack/FlowTrack/edit2/0042_gym-ball/2_A panda is performin.mp4",
+    "web": "assets/videos/gym-panda-ours.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "69"
+        }
+      ],
+      "format": {
+        "duration": "4.313000",
+        "size": "2143704"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "69"
+        }
+      ],
+      "format": {
+        "duration": "4.313000",
+        "size": "441466"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/nips/model_result/videos/FlowDirector/0042_gym-ball/2_A panda is performin.mp4",
+    "web": "assets/videos/gym-panda-baseline.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "69"
+        }
+      ],
+      "format": {
+        "duration": "4.313000",
+        "size": "2178698"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "69"
+        }
+      ],
+      "format": {
+        "duration": "4.313000",
+        "size": "415260"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/videos/0078_A_cat.mp4",
+    "web": "assets/videos/playful-dog-source.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 832,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "81"
+        }
+      ],
+      "format": {
+        "duration": "5.063000",
+        "size": "2246216"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 832,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "81"
+        }
+      ],
+      "format": {
+        "duration": "5.063000",
+        "size": "347816"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/nips/FlowTrack/FlowTrack/edit1/0078_A_cat/1_A dog is pouncing pl.mp4",
+    "web": "assets/videos/playful-dog-ours.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 832,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "81"
+        }
+      ],
+      "format": {
+        "duration": "5.063000",
+        "size": "2358438"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 832,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "81"
+        }
+      ],
+      "format": {
+        "duration": "5.063000",
+        "size": "315895"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/nips/model_result/videos/FlowDirector/0078_A_cat/1_A dog is pouncing pl.mp4",
+    "web": "assets/videos/playful-dog-baseline.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 832,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "81"
+        }
+      ],
+      "format": {
+        "duration": "5.063000",
+        "size": "2234883"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 832,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "81"
+        }
+      ],
+      "format": {
+        "duration": "5.063000",
+        "size": "276690"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/videos/0061_mbike-santa.mp4",
+    "web": "assets/videos/yellow-santa-source.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "60"
+        }
+      ],
+      "format": {
+        "duration": "3.750000",
+        "size": "1181000"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "60"
+        }
+      ],
+      "format": {
+        "duration": "3.750000",
+        "size": "1188419"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/nips/FlowTrack/FlowTrack/edit3/0061_mbike-santa/3_A person dressed in .mp4",
+    "web": "assets/videos/yellow-santa-ours.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "60"
+        }
+      ],
+      "format": {
+        "duration": "3.750000",
+        "size": "5611036"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "60"
+        }
+      ],
+      "format": {
+        "duration": "3.750000",
+        "size": "1469080"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/nips/model_result/videos/FlowDirector/0061_mbike-santa/3_A person dressed in .mp4",
+    "web": "assets/videos/yellow-santa-baseline.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "60"
+        }
+      ],
+      "format": {
+        "duration": "3.750000",
+        "size": "1372930"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "60"
+        }
+      ],
+      "format": {
+        "duration": "3.750000",
+        "size": "1345246"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/videos/0038_motorbike.mp4",
+    "web": "assets/videos/red-motorbike-source.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "43"
+        }
+      ],
+      "format": {
+        "duration": "2.688000",
+        "size": "503779"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "43"
+        }
+      ],
+      "format": {
+        "duration": "2.688000",
+        "size": "503419"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/nips/FlowTrack/FlowTrack/edit3/0038_motorbike/3_A red motorbike with.mp4",
+    "web": "assets/videos/red-motorbike-ours.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "43"
+        }
+      ],
+      "format": {
+        "duration": "2.688000",
+        "size": "3656133"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "43"
+        }
+      ],
+      "format": {
+        "duration": "2.688000",
+        "size": "849763"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/nips/model_result/videos/FlowDirector/0038_motorbike/3_A red motorbike with.mp4",
+    "web": "assets/videos/red-motorbike-baseline.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "43"
+        }
+      ],
+      "format": {
+        "duration": "2.688000",
+        "size": "794368"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "43"
+        }
+      ],
+      "format": {
+        "duration": "2.688000",
+        "size": "770447"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/videos/0045_butterfly.mp4",
+    "web": "assets/videos/pink-butterfly-source.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "80"
+        }
+      ],
+      "format": {
+        "duration": "5.000000",
+        "size": "353525"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "80"
+        }
+      ],
+      "format": {
+        "duration": "5.000000",
+        "size": "371083"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/nips/FlowTrack/FlowTrack/edit3/0045_butterfly/3_A vibrant pink butte.mp4",
+    "web": "assets/videos/pink-butterfly-ours.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "80"
+        }
+      ],
+      "format": {
+        "duration": "5.000000",
+        "size": "2476911"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "80"
+        }
+      ],
+      "format": {
+        "duration": "5.000000",
+        "size": "436205"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/nips/model_result/videos/FlowDirector/0045_butterfly/3_A vibrant pink butte.mp4",
+    "web": "assets/videos/pink-butterfly-baseline.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "80"
+        }
+      ],
+      "format": {
+        "duration": "5.000000",
+        "size": "418198"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "80"
+        }
+      ],
+      "format": {
+        "duration": "5.000000",
+        "size": "424861"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/videos/0089_A_dog.mp4",
+    "web": "assets/videos/plush-dog-source.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 832,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "81"
+        }
+      ],
+      "format": {
+        "duration": "5.063000",
+        "size": "4894018"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 832,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "81"
+        }
+      ],
+      "format": {
+        "duration": "5.063000",
+        "size": "1062000"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/nips/FlowTrack/FlowTrack/edit4/0089_A_dog/4_A plush dog is waggi.mp4",
+    "web": "assets/videos/plush-dog-ours.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 832,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "81"
+        }
+      ],
+      "format": {
+        "duration": "5.063000",
+        "size": "4586294"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 832,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "81"
+        }
+      ],
+      "format": {
+        "duration": "5.063000",
+        "size": "945849"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/nips/model_result/videos/FlowDirector/0089_A_dog/4_A plush dog is waggi.mp4",
+    "web": "assets/videos/plush-dog-baseline.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 832,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "81"
+        }
+      ],
+      "format": {
+        "duration": "5.063000",
+        "size": "4811778"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 832,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "81"
+        }
+      ],
+      "format": {
+        "duration": "5.063000",
+        "size": "989410"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/videos/0096_A_car.mp4",
+    "web": "assets/videos/coastal-jeep-source.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 832,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "81"
+        }
+      ],
+      "format": {
+        "duration": "5.063000",
+        "size": "5732014"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 832,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "81"
+        }
+      ],
+      "format": {
+        "duration": "5.063000",
+        "size": "1245273"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/nips/FlowTrack/FlowTrack/edit1/0096_A_car/1_A jeep is driving al.mp4",
+    "web": "assets/videos/coastal-jeep-ours.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 832,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "81"
+        }
+      ],
+      "format": {
+        "duration": "5.063000",
+        "size": "5549406"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 832,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "81"
+        }
+      ],
+      "format": {
+        "duration": "5.063000",
+        "size": "1155999"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/nips/model_result/videos/FlowDirector/0096_A_car/1_A jeep is driving al.mp4",
+    "web": "assets/videos/coastal-jeep-baseline.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 832,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "81"
+        }
+      ],
+      "format": {
+        "duration": "5.063000",
+        "size": "5485363"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 832,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "81"
+        }
+      ],
+      "format": {
+        "duration": "5.063000",
+        "size": "1187319"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/videos/0009_bear.mp4",
+    "web": "assets/videos/bear-panda-source.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "82"
+        }
+      ],
+      "format": {
+        "duration": "5.125000",
+        "size": "814341"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "82"
+        }
+      ],
+      "format": {
+        "duration": "5.125000",
+        "size": "804962"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/nips/FlowTrack/FlowTrack/edit1/0009_bear/1_A large panda is wal.mp4",
+    "web": "assets/videos/bear-panda-ours.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "82"
+        }
+      ],
+      "format": {
+        "duration": "5.125000",
+        "size": "9040623"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "82"
+        }
+      ],
+      "format": {
+        "duration": "5.125000",
+        "size": "1699189"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/nips/model_result/videos/FlowDirector/0009_bear/1_A large panda is wal.mp4",
+    "web": "assets/videos/bear-panda-baseline.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "82"
+        }
+      ],
+      "format": {
+        "duration": "5.125000",
+        "size": "1405079"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "82"
+        }
+      ],
+      "format": {
+        "duration": "5.125000",
+        "size": "1373455"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/videos/0058_boat.mp4",
+    "web": "assets/videos/boat-yacht-source.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "75"
+        }
+      ],
+      "format": {
+        "duration": "4.688000",
+        "size": "789066"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "75"
+        }
+      ],
+      "format": {
+        "duration": "4.688000",
+        "size": "756094"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/nips/FlowTrack/FlowTrack/edit1/0058_boat/1_A white yacht is cru.mp4",
+    "web": "assets/videos/boat-yacht-ours.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "75"
+        }
+      ],
+      "format": {
+        "duration": "4.688000",
+        "size": "4921253"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "75"
+        }
+      ],
+      "format": {
+        "duration": "4.688000",
+        "size": "808339"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/nips/model_result/videos/FlowDirector/0058_boat/1_A white yacht is cru.mp4",
+    "web": "assets/videos/boat-yacht-baseline.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "75"
+        }
+      ],
+      "format": {
+        "duration": "4.688000",
+        "size": "695689"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "75"
+        }
+      ],
+      "format": {
+        "duration": "4.688000",
+        "size": "672376"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/videos/0057_dog.mp4",
+    "web": "assets/videos/dog-rabbit-source.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "60"
+        }
+      ],
+      "format": {
+        "duration": "3.750000",
+        "size": "1243905"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "60"
+        }
+      ],
+      "format": {
+        "duration": "3.750000",
+        "size": "1225004"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/nips/FlowTrack/FlowTrack/edit1/0057_dog/1_A rabbit is sniffing.mp4",
+    "web": "assets/videos/dog-rabbit-ours.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "60"
+        }
+      ],
+      "format": {
+        "duration": "3.750000",
+        "size": "5633032"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "60"
+        }
+      ],
+      "format": {
+        "duration": "3.750000",
+        "size": "1334421"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/nips/model_result/videos/FlowDirector/0057_dog/1_A rabbit is sniffing.mp4",
+    "web": "assets/videos/dog-rabbit-baseline.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "60"
+        }
+      ],
+      "format": {
+        "duration": "3.750000",
+        "size": "1217659"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "60"
+        }
+      ],
+      "format": {
+        "duration": "3.750000",
+        "size": "1207295"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/videos/0094_A_swan.mp4",
+    "web": "assets/videos/swan-duck-source.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 832,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "81"
+        }
+      ],
+      "format": {
+        "duration": "5.063000",
+        "size": "3911381"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 832,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "81"
+        }
+      ],
+      "format": {
+        "duration": "5.063000",
+        "size": "803881"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/nips/FlowTrack/FlowTrack/edit1/0094_A_swan/1_A duck is swimming g.mp4",
+    "web": "assets/videos/swan-duck-ours.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 832,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "81"
+        }
+      ],
+      "format": {
+        "duration": "5.063000",
+        "size": "3760433"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 832,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "81"
+        }
+      ],
+      "format": {
+        "duration": "5.063000",
+        "size": "778710"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/nips/model_result/videos/FlowDirector/0094_A_swan/1_A duck is swimming g.mp4",
+    "web": "assets/videos/swan-duck-baseline.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 832,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "81"
+        }
+      ],
+      "format": {
+        "duration": "5.063000",
+        "size": "3800175"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 832,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "81"
+        }
+      ],
+      "format": {
+        "duration": "5.063000",
+        "size": "794311"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/videos/0009_bear.mp4",
+    "web": "assets/videos/bear-dinosaur-source.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "82"
+        }
+      ],
+      "format": {
+        "duration": "5.125000",
+        "size": "814341"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "82"
+        }
+      ],
+      "format": {
+        "duration": "5.125000",
+        "size": "804962"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/nips/FlowTrack/FlowTrack/edit2/0009_bear/2_A large dinosaur is .mp4",
+    "web": "assets/videos/bear-dinosaur-ours.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "82"
+        }
+      ],
+      "format": {
+        "duration": "5.125000",
+        "size": "9329935"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "82"
+        }
+      ],
+      "format": {
+        "duration": "5.125000",
+        "size": "1814688"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/nips/model_result/videos/FlowDirector/0009_bear/2_A large dinosaur is .mp4",
+    "web": "assets/videos/bear-dinosaur-baseline.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "82"
+        }
+      ],
+      "format": {
+        "duration": "5.125000",
+        "size": "1497137"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "82"
+        }
+      ],
+      "format": {
+        "duration": "5.125000",
+        "size": "1465484"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/videos/0006_paragliding.mp4",
+    "web": "assets/videos/glider-dragon-source.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "70"
+        }
+      ],
+      "format": {
+        "duration": "4.375000",
+        "size": "423235"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "70"
+        }
+      ],
+      "format": {
+        "duration": "4.375000",
+        "size": "442923"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/nips/FlowTrack/FlowTrack/edit2/0006_paragliding/2_A dragon is soaring .mp4",
+    "web": "assets/videos/glider-dragon-ours.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "70"
+        }
+      ],
+      "format": {
+        "duration": "4.375000",
+        "size": "5803336"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "70"
+        }
+      ],
+      "format": {
+        "duration": "4.375000",
+        "size": "815610"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/nips/model_result/videos/FlowDirector/0006_paragliding/2_A dragon is soaring .mp4",
+    "web": "assets/videos/glider-dragon-baseline.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "70"
+        }
+      ],
+      "format": {
+        "duration": "4.375000",
+        "size": "733473"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "70"
+        }
+      ],
+      "format": {
+        "duration": "4.375000",
+        "size": "699408"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/videos/0057_dog.mp4",
+    "web": "assets/videos/dog-robot-source.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "60"
+        }
+      ],
+      "format": {
+        "duration": "3.750000",
+        "size": "1243905"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "60"
+        }
+      ],
+      "format": {
+        "duration": "3.750000",
+        "size": "1225004"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/nips/FlowTrack/FlowTrack/edit2/0057_dog/2_A robotic dog is sni.mp4",
+    "web": "assets/videos/dog-robot-ours.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "60"
+        }
+      ],
+      "format": {
+        "duration": "3.750000",
+        "size": "5673088"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "60"
+        }
+      ],
+      "format": {
+        "duration": "3.750000",
+        "size": "1350976"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/nips/model_result/videos/FlowDirector/0057_dog/2_A robotic dog is sni.mp4",
+    "web": "assets/videos/dog-robot-baseline.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "60"
+        }
+      ],
+      "format": {
+        "duration": "3.750000",
+        "size": "1242085"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "60"
+        }
+      ],
+      "format": {
+        "duration": "3.750000",
+        "size": "1234466"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/videos/0038_motorbike.mp4",
+    "web": "assets/videos/wooden-motorbike-source.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "43"
+        }
+      ],
+      "format": {
+        "duration": "2.688000",
+        "size": "503779"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "43"
+        }
+      ],
+      "format": {
+        "duration": "2.688000",
+        "size": "503419"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/nips/FlowTrack/FlowTrack/edit4/0038_motorbike/4_A wooden motorbike w.mp4",
+    "web": "assets/videos/wooden-motorbike-ours.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "43"
+        }
+      ],
+      "format": {
+        "duration": "2.688000",
+        "size": "3642390"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "43"
+        }
+      ],
+      "format": {
+        "duration": "2.688000",
+        "size": "844409"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/nips/model_result/videos/FlowDirector/0038_motorbike/4_A wooden motorbike w.mp4",
+    "web": "assets/videos/wooden-motorbike-baseline.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "43"
+        }
+      ],
+      "format": {
+        "duration": "2.688000",
+        "size": "809273"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "43"
+        }
+      ],
+      "format": {
+        "duration": "2.688000",
+        "size": "787149"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/videos/0035_helicopter.mp4",
+    "web": "assets/videos/helicopter-ufo-source.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "49"
+        }
+      ],
+      "format": {
+        "duration": "3.063000",
+        "size": "314146"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "49"
+        }
+      ],
+      "format": {
+        "duration": "3.063000",
+        "size": "334420"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/nips/FlowTrack/FlowTrack/edit2/0035_helicopter/2_A UFO is hovering ab.mp4",
+    "web": "assets/videos/helicopter-ufo-ours.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "49"
+        }
+      ],
+      "format": {
+        "duration": "3.063000",
+        "size": "2858566"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "49"
+        }
+      ],
+      "format": {
+        "duration": "3.063000",
+        "size": "403453"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/nips/model_result/videos/FlowDirector/0035_helicopter/2_A UFO is hovering ab.mp4",
+    "web": "assets/videos/helicopter-ufo-baseline.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "49"
+        }
+      ],
+      "format": {
+        "duration": "3.063000",
+        "size": "350043"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "49"
+        }
+      ],
+      "format": {
+        "duration": "3.063000",
+        "size": "355893"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/videos/0064_rollerblade.mp4",
+    "web": "assets/videos/roller-pikachu-source.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "35"
+        }
+      ],
+      "format": {
+        "duration": "2.188000",
+        "size": "273114"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "35"
+        }
+      ],
+      "format": {
+        "duration": "2.188000",
+        "size": "269986"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/nips/FlowTrack/FlowTrack/edit2/0064_rollerblade/2_A Pikachu is rollerb.mp4",
+    "web": "assets/videos/roller-pikachu-ours.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "35"
+        }
+      ],
+      "format": {
+        "duration": "2.188000",
+        "size": "2876157"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "35"
+        }
+      ],
+      "format": {
+        "duration": "2.188000",
+        "size": "542458"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/nips/model_result/videos/FlowDirector/0064_rollerblade/2_A Pikachu is rollerb.mp4",
+    "web": "assets/videos/roller-pikachu-baseline.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "35"
+        }
+      ],
+      "format": {
+        "duration": "2.188000",
+        "size": "483656"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "35"
+        }
+      ],
+      "format": {
+        "duration": "2.188000",
+        "size": "465605"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/videos/0014_burnout.mp4",
+    "web": "assets/videos/pink-burnout-source.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "72"
+        }
+      ],
+      "format": {
+        "duration": "4.500000",
+        "size": "1017593"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "72"
+        }
+      ],
+      "format": {
+        "duration": "4.500000",
+        "size": "1012599"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/nips/FlowTrack/FlowTrack/edit3/0014_burnout/3_A pink car is perfor.mp4",
+    "web": "assets/videos/pink-burnout-ours.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "72"
+        }
+      ],
+      "format": {
+        "duration": "4.500000",
+        "size": "5798295"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "72"
+        }
+      ],
+      "format": {
+        "duration": "4.500000",
+        "size": "1612601"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/nips/model_result/videos/FlowDirector/0014_burnout/3_A pink car is perfor.mp4",
+    "web": "assets/videos/pink-burnout-baseline.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "72"
+        }
+      ],
+      "format": {
+        "duration": "4.500000",
+        "size": "1392455"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "72"
+        }
+      ],
+      "format": {
+        "duration": "4.500000",
+        "size": "1429300"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/videos/0013_golf.mp4",
+    "web": "assets/videos/yellow-golf-source.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "79"
+        }
+      ],
+      "format": {
+        "duration": "4.938000",
+        "size": "1808264"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "79"
+        }
+      ],
+      "format": {
+        "duration": "4.938000",
+        "size": "1848875"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/nips/FlowTrack/FlowTrack/edit3/0013_golf/3_A man in a yellow sh.mp4",
+    "web": "assets/videos/yellow-golf-ours.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "79"
+        }
+      ],
+      "format": {
+        "duration": "4.938000",
+        "size": "9397456"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "79"
+        }
+      ],
+      "format": {
+        "duration": "4.938000",
+        "size": "2371415"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/nips/model_result/videos/FlowDirector/0013_golf/3_A man in a yellow sh.mp4",
+    "web": "assets/videos/yellow-golf-baseline.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "79"
+        }
+      ],
+      "format": {
+        "duration": "4.938000",
+        "size": "1926965"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "79"
+        }
+      ],
+      "format": {
+        "duration": "4.938000",
+        "size": "1896237"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/videos/0058_boat.mp4",
+    "web": "assets/videos/pink-boat-source.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "75"
+        }
+      ],
+      "format": {
+        "duration": "4.688000",
+        "size": "789066"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "75"
+        }
+      ],
+      "format": {
+        "duration": "4.688000",
+        "size": "756094"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/nips/FlowTrack/FlowTrack/edit3/0058_boat/3_A pink fishing boat .mp4",
+    "web": "assets/videos/pink-boat-ours.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "75"
+        }
+      ],
+      "format": {
+        "duration": "4.688000",
+        "size": "4964162"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "75"
+        }
+      ],
+      "format": {
+        "duration": "4.688000",
+        "size": "820228"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/nips/model_result/videos/FlowDirector/0058_boat/3_A pink fishing boat .mp4",
+    "web": "assets/videos/pink-boat-baseline.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "75"
+        }
+      ],
+      "format": {
+        "duration": "4.688000",
+        "size": "722395"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "75"
+        }
+      ],
+      "format": {
+        "duration": "4.688000",
+        "size": "701049"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/videos/0071_mallard-water.mp4",
+    "web": "assets/videos/blue-duck-source.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "80"
+        }
+      ],
+      "format": {
+        "duration": "5.000000",
+        "size": "2620436"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "80"
+        }
+      ],
+      "format": {
+        "duration": "5.000000",
+        "size": "2643061"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/nips/FlowTrack/FlowTrack/edit3/0071_mallard-water/3_A blue mallard duck .mp4",
+    "web": "assets/videos/blue-duck-ours.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "80"
+        }
+      ],
+      "format": {
+        "duration": "5.000000",
+        "size": "8000374"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "80"
+        }
+      ],
+      "format": {
+        "duration": "5.000000",
+        "size": "2397368"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/nips/model_result/videos/FlowDirector/0071_mallard-water/3_A blue mallard duck .mp4",
+    "web": "assets/videos/blue-duck-baseline.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "80"
+        }
+      ],
+      "format": {
+        "duration": "5.000000",
+        "size": "2130132"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "80"
+        }
+      ],
+      "format": {
+        "duration": "5.000000",
+        "size": "2128860"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/videos/0011_lucia.mp4",
+    "web": "assets/videos/red-dress-source.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "70"
+        }
+      ],
+      "format": {
+        "duration": "4.375000",
+        "size": "822962"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "70"
+        }
+      ],
+      "format": {
+        "duration": "4.375000",
+        "size": "826586"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/nips/FlowTrack/FlowTrack/edit3/0011_lucia/3_A woman in a red dre.mp4",
+    "web": "assets/videos/red-dress-ours.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "70"
+        }
+      ],
+      "format": {
+        "duration": "4.375000",
+        "size": "8641720"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "70"
+        }
+      ],
+      "format": {
+        "duration": "4.375000",
+        "size": "1773137"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/nips/model_result/videos/FlowDirector/0011_lucia/3_A woman in a red dre.mp4",
+    "web": "assets/videos/red-dress-baseline.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "70"
+        }
+      ],
+      "format": {
+        "duration": "4.375000",
+        "size": "1527584"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "70"
+        }
+      ],
+      "format": {
+        "duration": "4.375000",
+        "size": "1486206"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/videos/0079_A_bus.mp4",
+    "web": "assets/videos/wooden-bus-source.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 832,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "81"
+        }
+      ],
+      "format": {
+        "duration": "5.063000",
+        "size": "6734004"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 832,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "81"
+        }
+      ],
+      "format": {
+        "duration": "5.063000",
+        "size": "1660856"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/nips/FlowTrack/FlowTrack/edit4/0079_A_bus/4_A wooden bus is driv.mp4",
+    "web": "assets/videos/wooden-bus-ours.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 832,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "81"
+        }
+      ],
+      "format": {
+        "duration": "5.063000",
+        "size": "6457940"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 832,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "81"
+        }
+      ],
+      "format": {
+        "duration": "5.063000",
+        "size": "1503934"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/nips/model_result/videos/FlowDirector/0079_A_bus/4_A wooden bus is driv.mp4",
+    "web": "assets/videos/wooden-bus-baseline.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 832,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "81"
+        }
+      ],
+      "format": {
+        "duration": "5.063000",
+        "size": "6477499"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 832,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "81"
+        }
+      ],
+      "format": {
+        "duration": "5.063000",
+        "size": "1557224"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/videos/0045_butterfly.mp4",
+    "web": "assets/videos/glass-butterfly-source.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "80"
+        }
+      ],
+      "format": {
+        "duration": "5.000000",
+        "size": "353525"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "80"
+        }
+      ],
+      "format": {
+        "duration": "5.000000",
+        "size": "371083"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/nips/FlowTrack/FlowTrack/edit4/0045_butterfly/4_A vibrant glass blue.mp4",
+    "web": "assets/videos/glass-butterfly-ours.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "80"
+        }
+      ],
+      "format": {
+        "duration": "5.000000",
+        "size": "2504629"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "80"
+        }
+      ],
+      "format": {
+        "duration": "5.000000",
+        "size": "430563"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/nips/model_result/videos/FlowDirector/0045_butterfly/4_A vibrant glass blue.mp4",
+    "web": "assets/videos/glass-butterfly-baseline.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "80"
+        }
+      ],
+      "format": {
+        "duration": "5.000000",
+        "size": "423138"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "80"
+        }
+      ],
+      "format": {
+        "duration": "5.000000",
+        "size": "428073"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/videos/0089_A_dog.mp4",
+    "web": "assets/videos/dog-sunglasses-source.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 832,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "81"
+        }
+      ],
+      "format": {
+        "duration": "5.063000",
+        "size": "4894018"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 832,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "81"
+        }
+      ],
+      "format": {
+        "duration": "5.063000",
+        "size": "1062000"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/nips/FlowTrack/FlowTrack/edit5/0089_A_dog/5_A dog wearing sungla.mp4",
+    "web": "assets/videos/dog-sunglasses-ours.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 832,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "81"
+        }
+      ],
+      "format": {
+        "duration": "5.063000",
+        "size": "4547209"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 832,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "81"
+        }
+      ],
+      "format": {
+        "duration": "5.063000",
+        "size": "949708"
+      }
+    }
+  }
+]

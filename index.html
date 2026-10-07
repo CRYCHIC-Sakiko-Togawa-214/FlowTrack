@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="FlowTrack: Controlling Edit-Signal Execution in Inversion-Free Flow Video Editing. Explore real, synchronized video editing results from our NeurIPS 2026 paper.">
+  <meta property="og:title" content="FlowTrack — Change the subject. Keep the motion.">
+  <meta property="og:description" content="Training-free, inversion-free video editing. Explore matched source videos, FlowTrack results, and baseline comparisons. NeurIPS 2026.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/posters/beach-zebra-ours.jpg">
+  <title>FlowTrack · NeurIPS 2026</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="assets/cases.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <svg class="icon-sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-up-right" viewBox="0 0 24 24"><path d="M6 18 18 6M6 6h12v12"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="m9 5 11 7-11 7Z" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-pause" viewBox="0 0 24 24"><path d="M8 5v14m8-14v14" stroke-width="3"/></symbol>
+    <symbol id="i-reset" viewBox="0 0 24 24"><path d="M4 10a8 8 0 1 1 1.7 8M4 4v6h6"/></symbol>
+    <symbol id="i-expand" viewBox="0 0 24 24"><path d="M9 4H4v5m11-5h5v5M4 15v5h5m11-5v5h-5"/></symbol>
+    <symbol id="i-link" viewBox="0 0 24 24"><path d="m10 14 4-4m-7 5-1 1a4 4 0 0 0 6 6l4-4a4 4 0 0 0 0-6M17 9l1-1a4 4 0 0 0-6-6L8 6a4 4 0 0 0 0 6" transform="translate(0 -2)"/></symbol>
+    <symbol id="i-paper" viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6Zm8 0v5h4M9 12h6m-6 4h6"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><path d="m7 7-5 5 5 5m10-10 5 5-5 5M14 4l-4 16"/></symbol>
+    <symbol id="i-split" viewBox="0 0 24 24"><path d="M12 3v18M8 8l-4 4 4 4m8-8 4 4-4 4"/></symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24"><path d="M3 5h5v14H3Zm7 0h5v14h-5Zm7 0h4v14h-4Z"/></symbol>
+  </svg>
+
+  <a class="skip-link" href="#showcase">Skip to video experiments</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="./" aria-label="FlowTrack home">
+        <svg class="flow-mark" width="30" height="27" viewBox="0 0 30 27" aria-hidden="true"><path d="m2 5 7 8-7 8m10-16 7 8-7 8m10-16 7 8-7 8" fill="none" stroke="currentColor" stroke-width="2.6"/></svg>
+        FlowTrack<span class="brand-dot">.</span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="#gallery">Results</a><a href="#showcase">Compare</a>
+        <a href="#evaluation">Evaluation</a>
+      </nav>
+      <a class="header-paper" href="assets/FlowTrack-paper.pdf" target="_blank" rel="noopener" aria-label="Read the FlowTrack paper">Read the paper <svg class="icon"><use href="#i-up-right"/></svg></a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy container">
+        <div class="venue">NeurIPS 2026 <span>·</span> Video Editing</div>
+        <h1 id="hero-title">FlowTrack</h1>
+        <h2>Controlling Edit-Signal Execution<br>in Inversion-Free Flow Video Editing</h2>
+        <p class="hero-description">Reimagine the appearance. <span>Preserve the motion.</span><br>A training-free approach to consistent, text-guided video editing.</p>
+        <div class="hero-actions">
+          <a class="button button-dark" href="assets/FlowTrack-paper.pdf" target="_blank" rel="noopener"><svg class="icon"><use href="#i-paper"/></svg> Paper <svg class="icon"><use href="#i-up-right"/></svg></a>
+          <a class="button button-outline" href="assets/FlowTrack-code.zip" download><svg class="icon"><use href="#i-code"/></svg> Code</a>
+          <a class="button button-outline" href="#gallery"><svg class="icon"><use href="#i-play"/></svg> Explore 26 edits</a>
+        </div>
+      </div>
+      <div class="hero-films" id="hero-films" aria-label="Selected FlowTrack editing results"></div>
+      <div class="hero-bottom container"><p>Different subjects. Different materials. <strong>The same moment in motion.</strong></p><a href="#gallery">Discover the results <span>↓</span></a></div>
+    </section>
+
+    <section class="showcase container" id="showcase" aria-labelledby="showcase-title">
+      <div class="section-topline"><span class="eyebrow"><span class="live-dot"></span> INTERACTIVE COMPARISON</span><span class="eyebrow">SOURCE → EDIT</span></div>
+      <div class="showcase-heading">
+        <div><h2 id="showcase-title">Look closer. <em>Every frame matters.</em></h2><p>Play the source and edited videos together. Drag the divider to inspect what changes—and what stays.</p></div>
+        <a class="text-link gallery-jump" href="#gallery">View 26 examples <svg class="icon"><use href="#i-arrow"/></svg></a>
+      </div>
+
+      <div class="viewer" id="viewer">
+        <div class="viewer-toolbar">
+          <div class="active-edit"><span class="case-number" id="case-number">01</span><div><span class="eyebrow" id="case-category">SUBJECT REPLACEMENT</span><h3 id="case-title">Horse <span class="edit-arrow">→</span> Zebra</h3></div></div>
+          <div class="view-modes" role="group" aria-label="Comparison mode">
+            <button type="button" class="mode-button active" data-mode="grid" aria-pressed="true" aria-label="Side by side comparison"><svg class="icon"><use href="#i-grid"/></svg><span>Side by side</span></button>
+            <button type="button" class="mode-button" data-mode="swipe" aria-pressed="false" aria-label="Before and after comparison"><svg class="icon"><use href="#i-split"/></svg><span>Before / after</span></button>
+          </div>
+        </div>
+        <div class="comparison-stage" id="comparison-stage" data-mode="grid" style="--split: 50%; --video-ratio: 832 / 480;">
+          <figure class="video-panel source-panel">
+            <figcaption class="panel-label"><span class="label-dot"></span> Source <span class="panel-caption">THE ORIGINAL</span></figcaption>
+            <video id="video-source" class="comparison-video" muted playsinline preload="none" disablepictureinpicture aria-label="Original source video"></video>
+          </figure>
+          <figure class="video-panel ours-panel">
+            <figcaption class="panel-label"><span class="label-dot"></span> FlowTrack <span class="panel-caption">OURS</span></figcaption>
+            <video id="video-ours" class="comparison-video" muted playsinline preload="none" disablepictureinpicture aria-label="FlowTrack edited video"></video>
+          </figure>
+          <figure class="video-panel baseline-panel">
+            <figcaption class="panel-label"><span class="label-dot"></span> FlowDirector <span class="panel-caption">BASELINE</span></figcaption>
+            <video id="video-baseline" class="comparison-video" muted playsinline preload="none" disablepictureinpicture aria-label="FlowDirector baseline video"></video>
+          </figure>
+          <div class="swipe-divider" id="swipe-divider" aria-hidden="true"><span><svg class="icon"><use href="#i-split"/></svg></span></div>
+          <div class="loading-overlay" id="loading-overlay"><span class="loading-spinner"></span><span>Loading this experiment</span></div>
+        </div>
+        <div class="split-controls" id="split-controls" hidden><span>Source</span><input id="split-range" type="range" min="2" max="98" value="50" aria-label="Before and after split position"><span>FlowTrack</span></div>
+        <div class="playback-controls">
+          <button class="control-button play-button" id="play-button" type="button" aria-label="Play all videos" title="Play / pause"><svg class="icon"><use href="#i-play"/></svg></button>
+          <button class="control-button restart-button" id="restart-button" type="button" aria-label="Restart all videos" title="Restart"><svg class="icon"><use href="#i-reset"/></svg></button>
+          <span class="time-display" id="time-display">0.0 / 5.1s</span>
+          <input class="timeline" id="timeline" type="range" min="0" max="1000" value="0" aria-label="Seek all videos">
+          <button class="control-button speed-button" id="speed-button" type="button" aria-label="Switch to half speed" title="Playback speed">1×</button>
+          <span class="sync-label"><span></span> IN SYNC</span>
+          <button class="control-button" id="fullscreen-button" type="button" aria-label="Expand video comparison" title="Fullscreen"><svg class="icon"><use href="#i-expand"/></svg></button>
+        </div>
+        <div class="edit-caption">
+          <div><span class="eyebrow">TARGET EDIT</span><p id="edit-instruction">Change the horse into a zebra.</p></div>
+          <button class="copy-case text-link" id="copy-case" type="button" aria-label="Copy example link"><svg class="icon"><use href="#i-link"/></svg><span>Copy example link</span></button>
+        </div>
+        <p class="player-status" id="player-status" role="status" aria-live="polite"></p>
+      </div>
+      <details class="prompt-details">
+        <summary>View the full source &amp; target prompts <span>+</span></summary>
+        <div class="prompt-columns"><div><span class="eyebrow">SOURCE PROMPT</span><p id="source-prompt"></p></div><div><span class="eyebrow">TARGET PROMPT</span><p id="target-prompt"></p></div></div>
+      </details>
+
+      <div class="gallery-section" id="gallery">
+        <div class="gallery-intro"><span class="eyebrow">THE RESULTS</span><h2>One video.<br><em>So many possibilities.</em></h2><p>26 positive editing examples across five categories.<br>Browse the videos directly, or open any example for a closer comparison.</p></div>
+        <div class="gallery-tools">
+          <div class="filter-bar" role="group" aria-label="Filter examples by edit type">
+            <button type="button" class="filter-button active" data-filter="all" aria-pressed="true">All edits <span>26</span></button>
+            <button type="button" class="filter-button" data-filter="subject" aria-pressed="false">Subject</button>
+            <button type="button" class="filter-button" data-filter="creative" aria-pressed="false">Creative</button>
+            <button type="button" class="filter-button" data-filter="color" aria-pressed="false">Color</button>
+            <button type="button" class="filter-button" data-filter="material" aria-pressed="false">Material</button>
+            <button type="button" class="filter-button" data-filter="addition" aria-pressed="false">Addition</button>
+          </div>
+          <div class="gallery-utilities"><label class="search-label"><span class="sr-only">Search examples</span><input id="case-search" type="search" placeholder="Search edits…" autocomplete="off"></label><button id="gallery-motion" class="motion-button" type="button" aria-pressed="true">Pause previews</button></div>
+        </div>
+        <div class="gallery-meta"><span id="gallery-count" role="status">26 examples</span><span>Original on the left · FlowTrack on the right</span></div>
+        <div class="case-grid" id="case-grid"></div>
+        <div class="load-more-wrap"><button id="load-more" class="button button-outline" type="button">Show more examples <svg class="icon"><use href="#i-arrow"/></svg></button></div>
+        <noscript><p>Enable JavaScript to explore the videos, or <a href="assets/videos/beach-zebra-ours.mp4">watch a FlowTrack result directly</a>.</p></noscript>
+      </div>
+    </section>
+
+    <section class="evaluation-section container" id="evaluation" aria-labelledby="evaluation-title">
+      <div class="section-topline"><span class="eyebrow">BEYOND THE EYE TEST</span><span class="eyebrow">FiVE-BENCH</span></div>
+      <div class="evaluation-heading"><h2 id="evaluation-title">Consistency, <em>measured.</em></h2><p>Evaluated on the full FiVE-Bench protocol:<br><strong>419 edits</strong> across <strong>6 editing types</strong>.</p></div>
+      <div class="metric-highlights">
+        <article><span class="eyebrow">MOTION FIDELITY ↑</span><div class="metric-value">86.09<span>MFS</span></div><p>Keep the source moving as it should.</p></article>
+        <article><span class="eyebrow">UNEDITED-REGION SIMILARITY ↑</span><div class="metric-value">90.21<span>SSIM</span></div><p>Preserve content outside the edit.</p></article>
+        <article><span class="eyebrow">STRUCTURAL DEVIATION ↓</span><div class="metric-value">5.98<span>distance</span></div><p>Stay close to the source layout.</p></article>
+      </div>
+      <div class="table-header"><h3>The full comparison</h3><span class="eyebrow">TABLE 1 · OVERALL RESULTS</span></div>
+      <div class="table-scroll" tabindex="0" role="region" aria-label="Scrollable FiVE-Bench results table">
+        <table class="results-table">
+          <caption class="sr-only">Overall FiVE-Bench results on 419 edits. Arrows indicate whether a higher or lower value is better. Bold values are best.</caption>
+          <thead><tr><th scope="col">Method</th><th scope="col">MFS ↑</th><th scope="col">CLIP ↑</th><th scope="col">PSNR ↑</th><th scope="col">LPIPS ↓</th><th scope="col">MSE ↓</th><th scope="col">SSIM ↑</th><th scope="col">Structure ↓</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">FateZero</th><td>73.7298</td><td>26.0856</td><td>18.6122</td><td>236.8776</td><td>155.9120</td><td>69.1964</td><td>55.3834</td></tr>
+            <tr><th scope="row">FLATTEN</th><td>73.9243</td><td>26.9928</td><td>16.3716</td><td>269.9812</td><td>255.4401</td><td>62.9804</td><td>71.3739</td></tr>
+            <tr><th scope="row">FlowDirector</th><td>85.2422</td><td><strong>27.6559</strong></td><td>27.4104</td><td>52.4975</td><td>22.9882</td><td>87.7195</td><td>8.9845</td></tr>
+            <tr><th scope="row">RAVE</th><td>82.3514</td><td>27.3857</td><td>20.8132</td><td>137.9647</td><td>96.9810</td><td>78.1291</td><td>25.2783</td></tr>
+            <tr><th scope="row">TokenFlow</th><td>81.1081</td><td>26.4377</td><td>23.0263</td><td>137.5256</td><td>57.7608</td><td>75.4634</td><td>26.6105</td></tr>
+            <tr><th scope="row">Wan-Edit</th><td>83.1296</td><td>26.1248</td><td>25.5700</td><td>71.1971</td><td>39.8569</td><td>83.4118</td><td>12.2960</td></tr>
+            <tr><th scope="row">DFVEdit</th><td>82.8349</td><td>27.1560</td><td>25.1480</td><td>72.4622</td><td>37.9288</td><td>82.9375</td><td>11.9711</td></tr>
+            <tr class="ours-row"><th scope="row">FlowTrack <span>OURS</span></th><td><strong>86.0860</strong></td><td>27.4871</td><td><strong>29.2961</strong></td><td><strong>39.5408</strong></td><td><strong>15.3677</strong></td><td><strong>90.2092</strong></td><td><strong>5.9808</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="evaluation-note">FlowTrack leads the six preservation metrics in this comparison, with a small trade-off in target-prompt alignment: FlowDirector has the highest CLIP score. Values and metric scaling follow Table 1 of the paper.</p>
+    </section>
+
+    <section class="resources-section container" id="resources" aria-labelledby="resources-title">
+      <div><span class="eyebrow">THE RESEARCH</span><h2 id="resources-title">Explore the research.</h2><p>FlowTrack: Controlling Edit-Signal Execution<br>in Inversion-Free Flow Video Editing</p></div>
+      <div class="resource-actions"><a class="button button-dark" href="assets/FlowTrack-paper.pdf" target="_blank" rel="noopener"><svg class="icon"><use href="#i-paper"/></svg> Read the paper <svg class="icon"><use href="#i-up-right"/></svg></a><a class="button button-outline" href="assets/FlowTrack-code.zip" download><svg class="icon"><use href="#i-code"/></svg> Download code</a></div>
+    </section>
+  </main>
+  <footer class="site-footer container"><a class="brand" href="./">FlowTrack<span class="brand-dot">.</span></a><p>NeurIPS 2026 · Research project</p><a href="#hero-title">Back to top ↑</a></footer>
+</body>
+</html>

@@ -1,19 +1,25 @@
-# FlowTrack Code
+# FlowTrack
 
-This directory contains the anonymous-review implementation used for FlowTrack experiments.
+FlowTrack is a training-free, inversion-free approach for consistent text-guided video editing.
 
-## Structure
+## Demo
+
+The project page is available directly from the repository root:
+
+- GitHub Pages: `https://crychic-sakiko-togawa-214.github.io/FlowTrack/`
+- Local preview: `python3 serve.py`, then open `http://127.0.0.1:8765/`
+
+The page is a static showcase built around **26 manually reviewed positive editing examples**. It includes synchronized Source / FlowTrack comparisons, swipe inspection, lazy-loaded result previews, category filters, search, shareable case URLs, the paper, and the code archive.
+
+The demo assets are self-contained under `assets/`; no external scripts, fonts, model weights, or inference service are required. The page intentionally excludes failed or visibly unstable examples so the showcase focuses on clear, presentation-ready results.
+
+## Code
 
 - `edit.py`: main entry point for video editing and FiVE-Bench style batch evaluation.
 - `wan/text2video.py`: Wan text-to-video editing pipeline with the FlowTrack execution controller.
-- `wan/configs/`: model and inference configuration files.
-- `wan/modules/`: model, VAE, tokenizer, CLIP, and T5 modules.
-- `wan/utils/`: sampling solvers, prompt utilities, and video/image IO helpers.
-- `wan/distributed/`: distributed and context-parallel helper functions.
+- `wan/`: model, solver, prompt, distributed, and video I/O utilities.
 
-## Basic Usage
-
-Prepare the pretrained Wan checkpoints and the evaluation videos separately. They are not included in this code release.
+Prepare the pretrained Wan checkpoints and evaluation videos separately. They are not included in this repository.
 
 Example command:
 
@@ -28,7 +34,6 @@ python edit.py \
   --flowtrack_lambda 0.20
 ```
 
-## Notes
+## Citation
 
-- The code is training-free and does not finetune the pretrained generator.
-- Paths in the example command are placeholders; use local paths for checkpoints, datasets, and outputs.
+Please cite the FlowTrack paper when using the method or demo assets.
