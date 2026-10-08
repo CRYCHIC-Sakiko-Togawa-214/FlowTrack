@@ -61,10 +61,10 @@
       entry.videos.forEach(function (video) { video.src = video.dataset.src; video.load(); });
     }
     if (entry.starting) return;
-    if (!entry.videos.every(function (video) { return video.readyState >= 2; })) return;
+    if (!entry.videos.some(function (video) { return video.readyState >= 2; })) return;
     entry.starting = true;
     try {
-      var master = entry.videos[0];
+      var master = entry.videos.find(function (video) { return video.readyState >= 2; }) || entry.videos[0];
       var time = master.ended ? 0 : master.currentTime;
       entry.videos.forEach(function (video) {
         if (video.readyState >= 1 && Math.abs(video.currentTime - time) > .08) video.currentTime = time;
