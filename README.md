@@ -14,9 +14,8 @@ python3 /home/maviuserzjl/zjl_edit/it2v_edit_zjl/nips/demo/serve.py
 
 - 26 个精选正面案例：主体、创意、颜色、材质和添加五类编辑。
 - 动态结果墙：桌面每行两组，手机每行一组；默认 24 例，可展开至 26。
-- 全部案例只展示 Source / FlowTrack 双列对比，突出 FlowTrack 的实际编辑效果。
-- 可拖动前后对照、同步时间轴、半速播放、重播和全屏。
-- 搜索、分类筛选、暂停动态预览、完整 source / target prompt 和案例分享链接。
+- 主页面直接展示多案例结果墙；每张卡片展示 Source / FlowTrack 双列预览，突出 FlowTrack 的实际编辑效果。
+- 搜索、分类筛选、暂停动态预览；点击卡片只更新选中状态并保持结果墙位置。
 - 完整 FiVE-Bench Table 1、论文和代码下载。
 - 桌面及移动端适配，离屏暂停，尊重系统减少动态效果设置。
 
@@ -28,9 +27,9 @@ Demo 只展示经过逐帧人工抽查的正面结果；未达到展示标准的
 
 Source 来自 `../../videos/`，FlowTrack 来自 `../FlowTrack/FlowTrack/edit1…edit6/`。完整 prompt 来自工作区 `bench/FiVE-Bench/files/flowtrack_ablation_direct_execution_edit*_existing.json`。
 
-未使用临时参数扫描、其他论文结果或合成占位视频。每例的 Source / FlowTrack 视频具有相同分辨率、帧率、帧数与时长。只做 H.264 CRF 22 网页重编码和 faststart，不裁切、插帧或改变原始速度。图库封面裁切仅影响卡片显示，主播放器保留完整画面。
+未使用临时参数扫描、其他论文结果或合成占位视频。每例的 Source / FlowTrack 视频具有相同分辨率、帧率、帧数与时长。只做 H.264 CRF 22 网页重编码和 faststart，不裁切、插帧或改变原始速度。图库封面裁切仅影响卡片显示；页面直接以结果墙作为主要展示区域。
 
-约 52 段网页视频，体积随筛选结果自动生成。大播放器只加载当前案例；首屏与结果墙的动态预览只在进入视口时加载，并在离屏时暂停。素材映射和 metadata 见 `assets/provenance.json`。
+约 52 段网页视频，体积随筛选结果自动生成。首屏与结果墙的动态预览只在进入视口时加载，并在离屏时暂停。素材映射和 metadata 见 `assets/provenance.json`。
 
 `assets/FlowTrack-code.zip` 打包 `../code/`，排除 `.git` 和缓存，不包含模型权重。当前 GitHub 地址无法公开访问，因此使用本地代码下载；公开仓库就绪后可替换下载链接。
 
