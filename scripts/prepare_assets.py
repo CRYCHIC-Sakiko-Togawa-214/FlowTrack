@@ -42,6 +42,18 @@ SELECTION = [
     ("wooden-bus", "0079_A_bus", 4, "material", "Bus", "Wooden bus", "A material change through a rainy night.", 1.0),
     ("carbon-drift", "0059_drift-straight", 4, "material", "Red sports car", "Carbon-fiber sports car", "A material change through a fast drift.", 1.0),
     ("dog-sunglasses", "0089_A_dog", 5, "addition", "Dog", "Add sunglasses", "Add a clear accessory without losing the pose.", 1.0),
+    # Additional qualitative examples from Appendix E.2 of the paper.
+    ("silver-jeep-turn", "0015_car-shadow", 1, "subject", "Silver car", "Silver jeep", "A precise vehicle change at an urban intersection.", 1.0),
+    ("purple-bicycle", "0075_A_bicycle", 3, "color", "Bicycle", "Purple bicycle", "A local color edit through a steady street roll.", 1.0),
+    ("bear-cap", "0009_bear", 5, "addition", "Bear", "Bear with cap", "Add a small accessory while preserving the walk.", 1.0),
+    ("woman-to-man", "0011_lucia", 1, "subject", "Woman in black dress", "Man in black suit", "A full subject and outfit change along the same path.", 1.0),
+    ("hawk-blue-bird", "0077_A_hawk", 1, "subject", "Hawk", "Blue bird", "A tracked aerial subject change over the canyon.", 1.0),
+    ("pink-suv", "0069_car-turn", 3, "color", "Silver SUV", "Pink SUV", "A clean vehicle color change through the mountain turn.", 1.0),
+    ("cow-horse", "0034_cows", 1, "subject", "Cow", "Horse", "A rural subject change with the same steady walk.", 1.0),
+    ("boat-kayak", "0083_A_boat", 1, "subject", "Boat", "Kayak", "Change the vessel while preserving the calm river motion.", 1.0),
+    ("roller-batman", "0024_hockey", 1, "creative", "Rollerblader", "Batman", "A character transformation through the same skating action.", 1.0),
+    ("red-snowboarder", "0037_snowboard-sand", 3, "color", "Snowboarder", "Red snowboarder", "A local outfit edit through a long sand descent.", 1.0),
+    ("fighter-helicopter", "0021_landing", 1, "subject", "Fighter jet", "Helicopter", "A tracked aircraft change on the carrier deck.", 1.0),
 ]
 
 

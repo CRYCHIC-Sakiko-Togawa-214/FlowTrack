@@ -12,8 +12,8 @@ python3 /home/maviuserzjl/zjl_edit/it2v_edit_zjl/nips/demo/serve.py
 
 ## 页面功能
 
-- 26 个精选正面案例：主体、创意、颜色、材质和添加五类编辑。
-- 动态结果墙：桌面每行两组，手机每行一组；默认 24 例，可展开至 26。
+- 37 个精选正面案例：主体、创意、颜色、材质和添加五类编辑。
+- 动态结果墙：桌面每行两组，手机每行一组；默认 24 例，可展开至 37。
 - 主页面直接展示多案例结果墙；每张卡片展示 Source / FlowTrack 双列预览，突出 FlowTrack 的实际编辑效果。
 - 搜索、分类筛选、暂停动态预览；点击卡片只更新选中状态并保持结果墙位置。
 - 完整 FiVE-Bench Table 1、论文和代码下载。
@@ -22,6 +22,8 @@ python3 /home/maviuserzjl/zjl_edit/it2v_edit_zjl/nips/demo/serve.py
 ## 内容依据
 
 Demo 只展示经过逐帧人工抽查的正面结果；未达到展示标准的添加、删除和不稳定编辑已从选择清单与静态资源中移除。
+
+新增案例覆盖论文 Figure 1、Figure 3 以及 Appendix E.2 的定性视频；页面只展示 FlowTrack 输出和对应 Source。
 
 论文依据 `../34925_FlowTrack_Controlling_Ed.pdf`，方法核对 `../code/wan/text2video.py` 的 carrying 与 Otsu support 实现。评测保留全部原始数值、方向和 CLIP trade-off，不将精选数量与完整评测数量混写。
 

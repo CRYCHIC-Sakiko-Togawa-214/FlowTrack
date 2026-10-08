@@ -701,5 +701,302 @@ window.FLOWTRACK_CASES = [
         "poster": "assets/posters/dog-sunglasses-ours.jpg"
       }
     }
+  },
+  {
+    "id": "silver-jeep-turn",
+    "videoId": "0015_car-shadow",
+    "editType": 1,
+    "category": "subject",
+    "before": "Silver car",
+    "after": "Silver jeep",
+    "note": "A precise vehicle change at an urban intersection.",
+    "width": 864,
+    "height": 480,
+    "duration": 2.5,
+    "fps": "16/1",
+    "frames": 40,
+    "instruction": "Change the car to a jeep.",
+    "sourcePrompt": "A silver car is making a left turn at an urban intersection, surrounded by modern buildings and a pedestrian walking on the sidewalk. The camera remains stationary, capturing the car's smooth maneuver.",
+    "targetPrompt": "A silver jeep is making a left turn at an urban intersection, surrounded by modern buildings and a pedestrian walking on the sidewalk. The camera remains stationary, capturing the jeep's smooth maneuver.",
+    "media": {
+      "source": {
+        "src": "assets/videos/silver-jeep-turn-source.mp4",
+        "poster": "assets/posters/silver-jeep-turn-source.jpg"
+      },
+      "ours": {
+        "src": "assets/videos/silver-jeep-turn-ours.mp4",
+        "poster": "assets/posters/silver-jeep-turn-ours.jpg"
+      }
+    }
+  },
+  {
+    "id": "purple-bicycle",
+    "videoId": "0075_A_bicycle",
+    "editType": 3,
+    "category": "color",
+    "before": "Bicycle",
+    "after": "Purple bicycle",
+    "note": "A local color edit through a steady street roll.",
+    "width": 832,
+    "height": 480,
+    "duration": 5.063,
+    "fps": "16/1",
+    "frames": 81,
+    "instruction": "Add purple color to the bicycle.",
+    "sourcePrompt": "A bicycle is rolling steadily along a cobblestone street, with historic buildings and flower boxes lining the road. The camera remains fixed, capturing the bicycle's smooth motion.",
+    "targetPrompt": "A purple bicycle is rolling steadily along a cobblestone street, with historic buildings and flower boxes lining the road. The camera remains fixed, capturing the bicycle's smooth motion.",
+    "media": {
+      "source": {
+        "src": "assets/videos/purple-bicycle-source.mp4",
+        "poster": "assets/posters/purple-bicycle-source.jpg"
+      },
+      "ours": {
+        "src": "assets/videos/purple-bicycle-ours.mp4",
+        "poster": "assets/posters/purple-bicycle-ours.jpg"
+      }
+    }
+  },
+  {
+    "id": "bear-cap",
+    "videoId": "0009_bear",
+    "editType": 5,
+    "category": "addition",
+    "before": "Bear",
+    "after": "Bear with cap",
+    "note": "Add a small accessory while preserving the walk.",
+    "width": 864,
+    "height": 480,
+    "duration": 5.125,
+    "fps": "16/1",
+    "frames": 82,
+    "instruction": "Add a cap to the bear.",
+    "sourcePrompt": "A large brown bear is walking slowly across a rocky terrain in a zoo enclosure, surrounded by stone walls and scattered greenery. The camera remains fixed, capturing the bear's deliberate movements.",
+    "targetPrompt": "A large brown bear wearing a cap is walking slowly across a rocky terrain in a zoo enclosure, surrounded by stone walls and scattered greenery. The camera remains fixed, capturing the bear's deliberate movements.",
+    "media": {
+      "source": {
+        "src": "assets/videos/bear-cap-source.mp4",
+        "poster": "assets/posters/bear-cap-source.jpg"
+      },
+      "ours": {
+        "src": "assets/videos/bear-cap-ours.mp4",
+        "poster": "assets/posters/bear-cap-ours.jpg"
+      }
+    }
+  },
+  {
+    "id": "woman-to-man",
+    "videoId": "0011_lucia",
+    "editType": 1,
+    "category": "subject",
+    "before": "Woman in black dress",
+    "after": "Man in black suit",
+    "note": "A full subject and outfit change along the same path.",
+    "width": 864,
+    "height": 480,
+    "duration": 4.375,
+    "fps": "16/1",
+    "frames": 70,
+    "instruction": "Change the woman into a man and change her black dress into a black suit.",
+    "sourcePrompt": "A woman in a black dress is walking along a paved path in a lush green park, with trees and a wooden bench in the background. The camera remains fixed, capturing her steady movement.",
+    "targetPrompt": "A man in a black suit is walking along a paved path in a lush green park, with trees and a wooden bench in the background. The camera remains fixed, capturing his steady movement.",
+    "media": {
+      "source": {
+        "src": "assets/videos/woman-to-man-source.mp4",
+        "poster": "assets/posters/woman-to-man-source.jpg"
+      },
+      "ours": {
+        "src": "assets/videos/woman-to-man-ours.mp4",
+        "poster": "assets/posters/woman-to-man-ours.jpg"
+      }
+    }
+  },
+  {
+    "id": "hawk-blue-bird",
+    "videoId": "0077_A_hawk",
+    "editType": 1,
+    "category": "subject",
+    "before": "Hawk",
+    "after": "Blue bird",
+    "note": "A tracked aerial subject change over the canyon.",
+    "width": 832,
+    "height": 480,
+    "duration": 5.063,
+    "fps": "16/1",
+    "frames": 81,
+    "instruction": "Change the hawk into a blue bird.",
+    "sourcePrompt": "A hawk is soaring majestically over a rocky canyon, with the sun casting long shadows on the ground. The camera quickly tilts upward to track the hawk's flight.",
+    "targetPrompt": "A blue bird is soaring majestically over a rocky canyon, with the sun casting long shadows on the ground. The camera quickly tilts upward to track the bird's flight.",
+    "media": {
+      "source": {
+        "src": "assets/videos/hawk-blue-bird-source.mp4",
+        "poster": "assets/posters/hawk-blue-bird-source.jpg"
+      },
+      "ours": {
+        "src": "assets/videos/hawk-blue-bird-ours.mp4",
+        "poster": "assets/posters/hawk-blue-bird-ours.jpg"
+      }
+    }
+  },
+  {
+    "id": "pink-suv",
+    "videoId": "0069_car-turn",
+    "editType": 3,
+    "category": "color",
+    "before": "Silver SUV",
+    "after": "Pink SUV",
+    "note": "A clean vehicle color change through the mountain turn.",
+    "width": 864,
+    "height": 480,
+    "duration": 5.0,
+    "fps": "16/1",
+    "frames": 80,
+    "instruction": "Change the color of the SUV from silver to pink.",
+    "sourcePrompt": "A silver SUV is navigating a winding mountain road surrounded by lush green forests and towering mountains in the background. The camera remains stationary, capturing the car's smooth turn along the curve of the road.",
+    "targetPrompt": "A pink SUV is navigating a winding mountain road surrounded by lush green forests and towering mountains in the background. The camera remains stationary, capturing the car's smooth turn along the curve of the road.",
+    "media": {
+      "source": {
+        "src": "assets/videos/pink-suv-source.mp4",
+        "poster": "assets/posters/pink-suv-source.jpg"
+      },
+      "ours": {
+        "src": "assets/videos/pink-suv-ours.mp4",
+        "poster": "assets/posters/pink-suv-ours.jpg"
+      }
+    }
+  },
+  {
+    "id": "cow-horse",
+    "videoId": "0034_cows",
+    "editType": 1,
+    "category": "subject",
+    "before": "Cow",
+    "after": "Horse",
+    "note": "A rural subject change with the same steady walk.",
+    "width": 864,
+    "height": 480,
+    "duration": 6.5,
+    "fps": "16/1",
+    "frames": 104,
+    "instruction": "Change the cow into a horse.",
+    "sourcePrompt": "A brown and white cow is walking along a dirt path in a grassy field. The camera remains stationary, capturing the cow's steady movement.",
+    "targetPrompt": "A brown and white horse is walking along a dirt path in a grassy field. The camera remains stationary, capturing the horse's steady movement.",
+    "media": {
+      "source": {
+        "src": "assets/videos/cow-horse-source.mp4",
+        "poster": "assets/posters/cow-horse-source.jpg"
+      },
+      "ours": {
+        "src": "assets/videos/cow-horse-ours.mp4",
+        "poster": "assets/posters/cow-horse-ours.jpg"
+      }
+    }
+  },
+  {
+    "id": "boat-kayak",
+    "videoId": "0083_A_boat",
+    "editType": 1,
+    "category": "subject",
+    "before": "Boat",
+    "after": "Kayak",
+    "note": "Change the vessel while preserving the calm river motion.",
+    "width": 832,
+    "height": 480,
+    "duration": 5.063,
+    "fps": "16/1",
+    "frames": 81,
+    "instruction": "Replace the boat with a kayak.",
+    "sourcePrompt": "A boat is sailing smoothly across a calm river, with trees and a small dock in the background. The camera remains fixed, capturing the boat's serene motion.",
+    "targetPrompt": "A kayak is sailing smoothly across a calm river, with trees and a small dock in the background. The camera remains fixed, capturing the kayak's serene motion.",
+    "media": {
+      "source": {
+        "src": "assets/videos/boat-kayak-source.mp4",
+        "poster": "assets/posters/boat-kayak-source.jpg"
+      },
+      "ours": {
+        "src": "assets/videos/boat-kayak-ours.mp4",
+        "poster": "assets/posters/boat-kayak-ours.jpg"
+      }
+    }
+  },
+  {
+    "id": "roller-batman",
+    "videoId": "0024_hockey",
+    "editType": 1,
+    "category": "creative",
+    "before": "Rollerblader",
+    "after": "Batman",
+    "note": "A character transformation through the same skating action.",
+    "width": 864,
+    "height": 480,
+    "duration": 4.688,
+    "fps": "16/1",
+    "frames": 75,
+    "instruction": "Change the person to a batman.",
+    "sourcePrompt": "A person on rollerblades is skillfully maneuvering a hockey stick to control a small ball on an outdoor court. The environment is an open area with a green fence and graffiti in the background. The camera remains stationary, capturing the dynamic movements of the person as they glide across the court.",
+    "targetPrompt": "A batman on rollerblades is skillfully maneuvering a hockey stick to control a small ball on an outdoor court. The environment is an open area with a green fence and graffiti in the background. The camera remains stationary, capturing the dynamic movements of the batman as he glides across the court.",
+    "media": {
+      "source": {
+        "src": "assets/videos/roller-batman-source.mp4",
+        "poster": "assets/posters/roller-batman-source.jpg"
+      },
+      "ours": {
+        "src": "assets/videos/roller-batman-ours.mp4",
+        "poster": "assets/posters/roller-batman-ours.jpg"
+      }
+    }
+  },
+  {
+    "id": "red-snowboarder",
+    "videoId": "0037_snowboard-sand",
+    "editType": 3,
+    "category": "color",
+    "before": "Snowboarder",
+    "after": "Red snowboarder",
+    "note": "A local outfit edit through a long sand descent.",
+    "width": 864,
+    "height": 480,
+    "duration": 3.438,
+    "fps": "16/1",
+    "frames": 55,
+    "instruction": "Change the woman's outfit to red.",
+    "sourcePrompt": "A woman is snowboarding down a vast sand dune, maintaining her balance as she glides over the sandy surface. The camera follows her descent, capturing her dynamic movements and the expansive desert landscape. As she continues, she loses balance and falls onto the sand, creating a small cloud of dust around her.",
+    "targetPrompt": "A woman in red is snowboarding down a vast sand dune, maintaining her balance as she glides over the sandy surface. The camera follows her descent, capturing her dynamic movements and the expansive desert landscape. As she continues, she loses balance and falls onto the sand, creating a small cloud of dust around her.",
+    "media": {
+      "source": {
+        "src": "assets/videos/red-snowboarder-source.mp4",
+        "poster": "assets/posters/red-snowboarder-source.jpg"
+      },
+      "ours": {
+        "src": "assets/videos/red-snowboarder-ours.mp4",
+        "poster": "assets/posters/red-snowboarder-ours.jpg"
+      }
+    }
+  },
+  {
+    "id": "fighter-helicopter",
+    "videoId": "0021_landing",
+    "editType": 1,
+    "category": "subject",
+    "before": "Fighter jet",
+    "after": "Helicopter",
+    "note": "A tracked aircraft change on the carrier deck.",
+    "width": 864,
+    "height": 480,
+    "duration": 2.188,
+    "fps": "16/1",
+    "frames": 35,
+    "instruction": "Replace the fighter jet with a helicopter.",
+    "sourcePrompt": "A fighter jet is landing on an aircraft carrier deck, with crew members in green and yellow vests observing the process. The camera remains stationary, capturing the jet's approach and landing.",
+    "targetPrompt": "A helicopter is landing on an aircraft carrier deck, with crew members in green and yellow vests observing the process. The camera remains stationary, capturing the helicopter's approach and landing.",
+    "media": {
+      "source": {
+        "src": "assets/videos/fighter-helicopter-source.mp4",
+        "poster": "assets/posters/fighter-helicopter-source.jpg"
+      },
+      "ours": {
+        "src": "assets/videos/fighter-helicopter-ours.mp4",
+        "poster": "assets/posters/fighter-helicopter-ours.jpg"
+      }
+    }
   }
 ];

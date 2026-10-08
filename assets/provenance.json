@@ -1766,5 +1766,753 @@
         "size": "949708"
       }
     }
+  },
+  {
+    "original": "it2v_edit_zjl/videos/0015_car-shadow.mp4",
+    "web": "assets/videos/silver-jeep-turn-source.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "40"
+        }
+      ],
+      "format": {
+        "duration": "2.500000",
+        "size": "385753"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "40"
+        }
+      ],
+      "format": {
+        "duration": "2.500000",
+        "size": "393114"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/nips/FlowTrack/FlowTrack/edit1/0015_car-shadow/1_A silver jeep is mak.mp4",
+    "web": "assets/videos/silver-jeep-turn-ours.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "40"
+        }
+      ],
+      "format": {
+        "duration": "2.500000",
+        "size": "2884743"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "40"
+        }
+      ],
+      "format": {
+        "duration": "2.500000",
+        "size": "617260"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/videos/0075_A_bicycle.mp4",
+    "web": "assets/videos/purple-bicycle-source.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 832,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "81"
+        }
+      ],
+      "format": {
+        "duration": "5.063000",
+        "size": "7048483"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 832,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "81"
+        }
+      ],
+      "format": {
+        "duration": "5.063000",
+        "size": "1749566"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/nips/FlowTrack/FlowTrack/edit3/0075_A_bicycle/3_A purple bicycle is .mp4",
+    "web": "assets/videos/purple-bicycle-ours.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 832,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "81"
+        }
+      ],
+      "format": {
+        "duration": "5.063000",
+        "size": "6744468"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 832,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "81"
+        }
+      ],
+      "format": {
+        "duration": "5.063000",
+        "size": "1578352"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/videos/0009_bear.mp4",
+    "web": "assets/videos/bear-cap-source.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "82"
+        }
+      ],
+      "format": {
+        "duration": "5.125000",
+        "size": "814341"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "82"
+        }
+      ],
+      "format": {
+        "duration": "5.125000",
+        "size": "804962"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/nips/FlowTrack/FlowTrack/edit5/0009_bear/5_A large brown bear w.mp4",
+    "web": "assets/videos/bear-cap-ours.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "82"
+        }
+      ],
+      "format": {
+        "duration": "5.125000",
+        "size": "9193310"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "82"
+        }
+      ],
+      "format": {
+        "duration": "5.125000",
+        "size": "1754027"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/videos/0011_lucia.mp4",
+    "web": "assets/videos/woman-to-man-source.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "70"
+        }
+      ],
+      "format": {
+        "duration": "4.375000",
+        "size": "822962"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "70"
+        }
+      ],
+      "format": {
+        "duration": "4.375000",
+        "size": "826586"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/nips/FlowTrack/FlowTrack/edit1/0011_lucia/1_A man in a black sui.mp4",
+    "web": "assets/videos/woman-to-man-ours.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "70"
+        }
+      ],
+      "format": {
+        "duration": "4.375000",
+        "size": "8673032"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "70"
+        }
+      ],
+      "format": {
+        "duration": "4.375000",
+        "size": "1787193"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/videos/0077_A_hawk.mp4",
+    "web": "assets/videos/hawk-blue-bird-source.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 832,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "81"
+        }
+      ],
+      "format": {
+        "duration": "5.063000",
+        "size": "4257629"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 832,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "81"
+        }
+      ],
+      "format": {
+        "duration": "5.063000",
+        "size": "985972"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/nips/FlowTrack/FlowTrack/edit1/0077_A_hawk/1_A blue bird is soari.mp4",
+    "web": "assets/videos/hawk-blue-bird-ours.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 832,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "81"
+        }
+      ],
+      "format": {
+        "duration": "5.063000",
+        "size": "4441102"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 832,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "81"
+        }
+      ],
+      "format": {
+        "duration": "5.063000",
+        "size": "1027434"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/videos/0069_car-turn.mp4",
+    "web": "assets/videos/pink-suv-source.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "80"
+        }
+      ],
+      "format": {
+        "duration": "5.000000",
+        "size": "836499"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "80"
+        }
+      ],
+      "format": {
+        "duration": "5.000000",
+        "size": "823453"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/nips/FlowTrack/FlowTrack/edit3/0069_car-turn/3_A pink SUV is naviga.mp4",
+    "web": "assets/videos/pink-suv-ours.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "80"
+        }
+      ],
+      "format": {
+        "duration": "5.000000",
+        "size": "7441962"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "80"
+        }
+      ],
+      "format": {
+        "duration": "5.000000",
+        "size": "1458365"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/videos/0034_cows.mp4",
+    "web": "assets/videos/cow-horse-source.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "104"
+        }
+      ],
+      "format": {
+        "duration": "6.500000",
+        "size": "1293943"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "104"
+        }
+      ],
+      "format": {
+        "duration": "6.500000",
+        "size": "1278275"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/nips/FlowTrack/FlowTrack/edit1/0034_cows/1_A brown and white ho.mp4",
+    "web": "assets/videos/cow-horse-ours.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "104"
+        }
+      ],
+      "format": {
+        "duration": "6.500000",
+        "size": "13731212"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "104"
+        }
+      ],
+      "format": {
+        "duration": "6.500000",
+        "size": "3044594"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/videos/0083_A_boat.mp4",
+    "web": "assets/videos/boat-kayak-source.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 832,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "81"
+        }
+      ],
+      "format": {
+        "duration": "5.063000",
+        "size": "7244683"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 832,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "81"
+        }
+      ],
+      "format": {
+        "duration": "5.063000",
+        "size": "1677273"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/nips/FlowTrack/FlowTrack/edit1/0083_A_boat/1_A kayak is sailing s.mp4",
+    "web": "assets/videos/boat-kayak-ours.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 832,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "81"
+        }
+      ],
+      "format": {
+        "duration": "5.063000",
+        "size": "6749636"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 832,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "81"
+        }
+      ],
+      "format": {
+        "duration": "5.063000",
+        "size": "1433885"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/videos/0024_hockey.mp4",
+    "web": "assets/videos/roller-batman-source.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "75"
+        }
+      ],
+      "format": {
+        "duration": "4.688000",
+        "size": "548521"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "75"
+        }
+      ],
+      "format": {
+        "duration": "4.688000",
+        "size": "565564"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/nips/FlowTrack/FlowTrack/edit1/0024_hockey/1_A batman on rollerbl.mp4",
+    "web": "assets/videos/roller-batman-ours.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "75"
+        }
+      ],
+      "format": {
+        "duration": "4.688000",
+        "size": "4640507"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "75"
+        }
+      ],
+      "format": {
+        "duration": "4.688000",
+        "size": "846926"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/videos/0037_snowboard-sand.mp4",
+    "web": "assets/videos/red-snowboarder-source.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "55"
+        }
+      ],
+      "format": {
+        "duration": "3.438000",
+        "size": "411846"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "55"
+        }
+      ],
+      "format": {
+        "duration": "3.438000",
+        "size": "419359"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/nips/FlowTrack/FlowTrack/edit3/0037_snowboard-sand/3_A woman in red is sn.mp4",
+    "web": "assets/videos/red-snowboarder-ours.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "55"
+        }
+      ],
+      "format": {
+        "duration": "3.438000",
+        "size": "2367337"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "55"
+        }
+      ],
+      "format": {
+        "duration": "3.438000",
+        "size": "479830"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/videos/0021_landing.mp4",
+    "web": "assets/videos/fighter-helicopter-source.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "35"
+        }
+      ],
+      "format": {
+        "duration": "2.188000",
+        "size": "221056"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "35"
+        }
+      ],
+      "format": {
+        "duration": "2.188000",
+        "size": "222281"
+      }
+    }
+  },
+  {
+    "original": "it2v_edit_zjl/nips/FlowTrack/FlowTrack/edit1/0021_landing/1_A helicopter is land.mp4",
+    "web": "assets/videos/fighter-helicopter-ours.mp4",
+    "original_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "35"
+        }
+      ],
+      "format": {
+        "duration": "2.188000",
+        "size": "1506262"
+      }
+    },
+    "web_metadata": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 864,
+          "height": 480,
+          "r_frame_rate": "16/1",
+          "nb_frames": "35"
+        }
+      ],
+      "format": {
+        "duration": "2.188000",
+        "size": "281145"
+      }
+    }
   }
 ]
