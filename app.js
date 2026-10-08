@@ -5,7 +5,7 @@
   var cases = window.FLOWTRACK_CASES || [];
   var byId = new Map(cases.map(function (item) { return [item.id, item]; }));
   var $ = function (selector) { return document.querySelector(selector); };
-  var videos = [$("#video-source"), $("#video-ours"), $("#video-baseline")];
+  var videos = [$("#video-source"), $("#video-ours")];
   var master = videos[0];
   var stage = $("#comparison-stage");
   var viewer = $("#viewer");
@@ -19,8 +19,8 @@
     visible: true, epoch: 0, playRequest: 0, controller: null, dragging: false
   };
 
-  function availableVideos() { return state.selected && state.selected.media.baseline ? videos : videos.slice(0, 2); }
-  function activeVideos() { return state.mode === "swipe" ? videos.slice(0, 2) : availableVideos(); }
+  function availableVideos() { return videos; }
+  function activeVideos() { return videos; }
   function status(message) { $("#player-status").textContent = message || ""; }
   function setPlayButton() {
     playButton.setAttribute("aria-label", state.intentPlaying ? "Pause all videos" : "Play all videos");
@@ -129,10 +129,7 @@
     });
     if (changeURL) updateURL(id);
     if (scroll) viewer.scrollIntoView({ behavior: reducedMotion.matches ? "instant" : "smooth", block: "start" });
-    var kinds = ["source", "ours", "baseline"];
-    stage.classList.toggle("no-baseline", !item.media.baseline);
-    $(".baseline-panel").hidden = !item.media.baseline;
-    if (!item.media.baseline) { videos[2].removeAttribute("src"); videos[2].removeAttribute("poster"); videos[2].load(); }
+    var kinds = ["source", "ours"];
     availableVideos().forEach(function (video, index) {
       var media = item.media[kinds[index]];
       video.poster = media.poster;
@@ -313,7 +310,6 @@
         other.classList.toggle("active", active);
         other.setAttribute("aria-pressed", String(active));
       });
-      if (state.mode === "swipe") videos[2].pause();
       playTogether();
     });
   });

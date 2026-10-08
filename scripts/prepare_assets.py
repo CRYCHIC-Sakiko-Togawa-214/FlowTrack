@@ -83,10 +83,10 @@ def main():
     ASSETS.mkdir(parents=True, exist_ok=True)
     # Keep the published bundle aligned with the curated positive-only selection.
     selected_ids = {row[0] for row in SELECTION}
-    for folder, suffixes in ((ASSETS / "videos", ("source", "ours", "baseline")), (ASSETS / "posters", ("source", "ours", "baseline"))):
+    for folder in (ASSETS / "videos", ASSETS / "posters"):
         if folder.exists():
             for path in folder.iterdir():
-                if path.is_file() and path.stem.rsplit("-", 1)[0] not in selected_ids:
+                if path.is_file() and (path.stem.endswith("-baseline") or path.stem.rsplit("-", 1)[0] not in selected_ids):
                     path.unlink()
     prompts = {}
     data, jobs = [], []
@@ -101,9 +101,6 @@ def main():
             "ours": next((NIPS / "FlowTrack/FlowTrack" / f"edit{edit}" / video_id).glob("*.mp4")),
             
         }
-        baseline = next((NIPS / "model_result/videos/FlowDirector" / video_id).glob(f"{edit}_*.mp4"), None)
-        if baseline is not None:
-            original_paths["baseline"] = baseline
         metadata = [probe(path) for path in original_paths.values()]
         shapes = {(m["streams"][0]["width"], m["streams"][0]["height"],
                    m["streams"][0]["r_frame_rate"], m["streams"][0].get("nb_frames"),

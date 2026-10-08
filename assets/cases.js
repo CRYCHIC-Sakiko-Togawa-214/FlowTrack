@@ -24,10 +24,6 @@ window.FLOWTRACK_CASES = [
       "ours": {
         "src": "assets/videos/beach-zebra-ours.mp4",
         "poster": "assets/posters/beach-zebra-ours.jpg"
-      },
-      "baseline": {
-        "src": "assets/videos/beach-zebra-baseline.mp4",
-        "poster": "assets/posters/beach-zebra-baseline.jpg"
       }
     }
   },
@@ -55,10 +51,6 @@ window.FLOWTRACK_CASES = [
       "ours": {
         "src": "assets/videos/gym-panda-ours.mp4",
         "poster": "assets/posters/gym-panda-ours.jpg"
-      },
-      "baseline": {
-        "src": "assets/videos/gym-panda-baseline.mp4",
-        "poster": "assets/posters/gym-panda-baseline.jpg"
       }
     }
   },
@@ -86,10 +78,6 @@ window.FLOWTRACK_CASES = [
       "ours": {
         "src": "assets/videos/playful-dog-ours.mp4",
         "poster": "assets/posters/playful-dog-ours.jpg"
-      },
-      "baseline": {
-        "src": "assets/videos/playful-dog-baseline.mp4",
-        "poster": "assets/posters/playful-dog-baseline.jpg"
       }
     }
   },
@@ -117,10 +105,6 @@ window.FLOWTRACK_CASES = [
       "ours": {
         "src": "assets/videos/yellow-santa-ours.mp4",
         "poster": "assets/posters/yellow-santa-ours.jpg"
-      },
-      "baseline": {
-        "src": "assets/videos/yellow-santa-baseline.mp4",
-        "poster": "assets/posters/yellow-santa-baseline.jpg"
       }
     }
   },
@@ -148,10 +132,6 @@ window.FLOWTRACK_CASES = [
       "ours": {
         "src": "assets/videos/red-motorbike-ours.mp4",
         "poster": "assets/posters/red-motorbike-ours.jpg"
-      },
-      "baseline": {
-        "src": "assets/videos/red-motorbike-baseline.mp4",
-        "poster": "assets/posters/red-motorbike-baseline.jpg"
       }
     }
   },
@@ -179,10 +159,6 @@ window.FLOWTRACK_CASES = [
       "ours": {
         "src": "assets/videos/pink-butterfly-ours.mp4",
         "poster": "assets/posters/pink-butterfly-ours.jpg"
-      },
-      "baseline": {
-        "src": "assets/videos/pink-butterfly-baseline.mp4",
-        "poster": "assets/posters/pink-butterfly-baseline.jpg"
       }
     }
   },
@@ -210,10 +186,6 @@ window.FLOWTRACK_CASES = [
       "ours": {
         "src": "assets/videos/plush-dog-ours.mp4",
         "poster": "assets/posters/plush-dog-ours.jpg"
-      },
-      "baseline": {
-        "src": "assets/videos/plush-dog-baseline.mp4",
-        "poster": "assets/posters/plush-dog-baseline.jpg"
       }
     }
   },
@@ -241,10 +213,6 @@ window.FLOWTRACK_CASES = [
       "ours": {
         "src": "assets/videos/coastal-jeep-ours.mp4",
         "poster": "assets/posters/coastal-jeep-ours.jpg"
-      },
-      "baseline": {
-        "src": "assets/videos/coastal-jeep-baseline.mp4",
-        "poster": "assets/posters/coastal-jeep-baseline.jpg"
       }
     }
   },
@@ -272,10 +240,6 @@ window.FLOWTRACK_CASES = [
       "ours": {
         "src": "assets/videos/bear-panda-ours.mp4",
         "poster": "assets/posters/bear-panda-ours.jpg"
-      },
-      "baseline": {
-        "src": "assets/videos/bear-panda-baseline.mp4",
-        "poster": "assets/posters/bear-panda-baseline.jpg"
       }
     }
   },
@@ -303,10 +267,6 @@ window.FLOWTRACK_CASES = [
       "ours": {
         "src": "assets/videos/boat-yacht-ours.mp4",
         "poster": "assets/posters/boat-yacht-ours.jpg"
-      },
-      "baseline": {
-        "src": "assets/videos/boat-yacht-baseline.mp4",
-        "poster": "assets/posters/boat-yacht-baseline.jpg"
       }
     }
   },
@@ -334,10 +294,6 @@ window.FLOWTRACK_CASES = [
       "ours": {
         "src": "assets/videos/dog-rabbit-ours.mp4",
         "poster": "assets/posters/dog-rabbit-ours.jpg"
-      },
-      "baseline": {
-        "src": "assets/videos/dog-rabbit-baseline.mp4",
-        "poster": "assets/posters/dog-rabbit-baseline.jpg"
       }
     }
   },
@@ -365,10 +321,6 @@ window.FLOWTRACK_CASES = [
       "ours": {
         "src": "assets/videos/swan-duck-ours.mp4",
         "poster": "assets/posters/swan-duck-ours.jpg"
-      },
-      "baseline": {
-        "src": "assets/videos/swan-duck-baseline.mp4",
-        "poster": "assets/posters/swan-duck-baseline.jpg"
       }
     }
   },
@@ -396,10 +348,6 @@ window.FLOWTRACK_CASES = [
       "ours": {
         "src": "assets/videos/bear-dinosaur-ours.mp4",
         "poster": "assets/posters/bear-dinosaur-ours.jpg"
-      },
-      "baseline": {
-        "src": "assets/videos/bear-dinosaur-baseline.mp4",
-        "poster": "assets/posters/bear-dinosaur-baseline.jpg"
       }
     }
   },
@@ -427,10 +375,6 @@ window.FLOWTRACK_CASES = [
       "ours": {
         "src": "assets/videos/glider-dragon-ours.mp4",
         "poster": "assets/posters/glider-dragon-ours.jpg"
-      },
-      "baseline": {
-        "src": "assets/videos/glider-dragon-baseline.mp4",
-        "poster": "assets/posters/glider-dragon-baseline.jpg"
       }
     }
   },
@@ -458,10 +402,6 @@ window.FLOWTRACK_CASES = [
       "ours": {
         "src": "assets/videos/dog-robot-ours.mp4",
         "poster": "assets/posters/dog-robot-ours.jpg"
-      },
-      "baseline": {
-        "src": "assets/videos/dog-robot-baseline.mp4",
-        "poster": "assets/posters/dog-robot-baseline.jpg"
       }
     }
   },
@@ -489,10 +429,6 @@ window.FLOWTRACK_CASES = [
       "ours": {
         "src": "assets/videos/wooden-motorbike-ours.mp4",
         "poster": "assets/posters/wooden-motorbike-ours.jpg"
-      },
-      "baseline": {
-        "src": "assets/videos/wooden-motorbike-baseline.mp4",
-        "poster": "assets/posters/wooden-motorbike-baseline.jpg"
       }
     }
   },
@@ -520,10 +456,6 @@ window.FLOWTRACK_CASES = [
       "ours": {
         "src": "assets/videos/helicopter-ufo-ours.mp4",
         "poster": "assets/posters/helicopter-ufo-ours.jpg"
-      },
-      "baseline": {
-        "src": "assets/videos/helicopter-ufo-baseline.mp4",
-        "poster": "assets/posters/helicopter-ufo-baseline.jpg"
       }
     }
   },
@@ -551,10 +483,6 @@ window.FLOWTRACK_CASES = [
       "ours": {
         "src": "assets/videos/roller-pikachu-ours.mp4",
         "poster": "assets/posters/roller-pikachu-ours.jpg"
-      },
-      "baseline": {
-        "src": "assets/videos/roller-pikachu-baseline.mp4",
-        "poster": "assets/posters/roller-pikachu-baseline.jpg"
       }
     }
   },
@@ -582,10 +510,6 @@ window.FLOWTRACK_CASES = [
       "ours": {
         "src": "assets/videos/pink-burnout-ours.mp4",
         "poster": "assets/posters/pink-burnout-ours.jpg"
-      },
-      "baseline": {
-        "src": "assets/videos/pink-burnout-baseline.mp4",
-        "poster": "assets/posters/pink-burnout-baseline.jpg"
       }
     }
   },
@@ -613,10 +537,6 @@ window.FLOWTRACK_CASES = [
       "ours": {
         "src": "assets/videos/yellow-golf-ours.mp4",
         "poster": "assets/posters/yellow-golf-ours.jpg"
-      },
-      "baseline": {
-        "src": "assets/videos/yellow-golf-baseline.mp4",
-        "poster": "assets/posters/yellow-golf-baseline.jpg"
       }
     }
   },
@@ -644,10 +564,6 @@ window.FLOWTRACK_CASES = [
       "ours": {
         "src": "assets/videos/pink-boat-ours.mp4",
         "poster": "assets/posters/pink-boat-ours.jpg"
-      },
-      "baseline": {
-        "src": "assets/videos/pink-boat-baseline.mp4",
-        "poster": "assets/posters/pink-boat-baseline.jpg"
       }
     }
   },
@@ -675,10 +591,6 @@ window.FLOWTRACK_CASES = [
       "ours": {
         "src": "assets/videos/blue-duck-ours.mp4",
         "poster": "assets/posters/blue-duck-ours.jpg"
-      },
-      "baseline": {
-        "src": "assets/videos/blue-duck-baseline.mp4",
-        "poster": "assets/posters/blue-duck-baseline.jpg"
       }
     }
   },
@@ -706,10 +618,6 @@ window.FLOWTRACK_CASES = [
       "ours": {
         "src": "assets/videos/red-dress-ours.mp4",
         "poster": "assets/posters/red-dress-ours.jpg"
-      },
-      "baseline": {
-        "src": "assets/videos/red-dress-baseline.mp4",
-        "poster": "assets/posters/red-dress-baseline.jpg"
       }
     }
   },
@@ -737,10 +645,6 @@ window.FLOWTRACK_CASES = [
       "ours": {
         "src": "assets/videos/wooden-bus-ours.mp4",
         "poster": "assets/posters/wooden-bus-ours.jpg"
-      },
-      "baseline": {
-        "src": "assets/videos/wooden-bus-baseline.mp4",
-        "poster": "assets/posters/wooden-bus-baseline.jpg"
       }
     }
   },
@@ -768,10 +672,6 @@ window.FLOWTRACK_CASES = [
       "ours": {
         "src": "assets/videos/glass-butterfly-ours.mp4",
         "poster": "assets/posters/glass-butterfly-ours.jpg"
-      },
-      "baseline": {
-        "src": "assets/videos/glass-butterfly-baseline.mp4",
-        "poster": "assets/posters/glass-butterfly-baseline.jpg"
       }
     }
   },
