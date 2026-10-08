@@ -258,9 +258,26 @@
       var meta = document.createElement("span");meta.className = "case-tag";meta.textContent = categoryNames[item.category];
       var heading = document.createElement("h3");heading.textContent = item.before + " → " + item.after;
       var note = document.createElement("p");note.textContent = item.instruction;
-      var action = document.createElement("span");action.className = "case-open";action.textContent = "Compare ↗";
+      var action = document.createElement("span");action.className = "case-open";action.textContent = "Load comparison ↗";
       body.append(meta,heading,note,action);card.append(frames,body);
-      card.addEventListener("click", function () { selectCase(item.id,true,true); });
+      // Gallery cards update the player in place. Keep the reader at the result
+      // they clicked instead of pulling them back to the comparison viewer.
+      var galleryScrollY = null;
+      card.addEventListener("mousedown", function (event) {
+        galleryScrollY = window.scrollY;
+        event.preventDefault();
+      });
+      card.addEventListener("click", function (event) {
+        var keepScroll = galleryScrollY;
+        event.preventDefault();
+        card.blur();
+        selectCase(item.id,false,true);
+        if (keepScroll !== null) {
+          window.scrollTo(0, keepScroll);
+          requestAnimationFrame(function () { window.scrollTo(0, keepScroll); });
+          setTimeout(function () { window.scrollTo(0, keepScroll); }, 80);
+        }
+      });
       card.hidden = true;grid.append(card);registerPreview(card,pair);
     });
     filterGallery();
