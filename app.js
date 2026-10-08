@@ -11,6 +11,13 @@
   var motionEnabled = !reducedMotion.matches;
   var galleryFilter = "all", galleryQuery = "", galleryLimit = 24;
   var selectedId = null;
+  var revealObserver = "IntersectionObserver" in window ? new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add("is-visible");
+      revealObserver.unobserve(entry.target);
+    });
+  }, { threshold: .12, rootMargin: "0px 0px -7%" }) : null;
   var lightbox = $("#result-lightbox");
   var lightboxVideos = [$("#lightbox-source"), $("#lightbox-ours")];
   var lightboxPlaying = false;
@@ -210,6 +217,7 @@
       var card = document.createElement("button");
       card.type = "button";
       card.className = "hero-film";
+      card.classList.add("reveal-item");
       card.setAttribute("aria-label", "View " + item.before + " to " + item.after + " result");
       var output = previewVideo(item, "ours");
       var source = previewVideo(item, "source");
@@ -230,6 +238,8 @@
       card.addEventListener("click", function () { selectCase(id, true, true); });
       $("#hero-films").append(card);
       registerPreview(card, [output, source]);
+      if (revealObserver) revealObserver.observe(card);
+      else card.classList.add("is-visible");
     });
   }
 
@@ -248,6 +258,7 @@
       var card = document.createElement("button");
       card.type = "button";
       card.className = "case-card";
+      card.classList.add("reveal-item");
       card.dataset.case = item.id;
       card.dataset.category = item.category;
       card.dataset.search = [item.before, item.after, item.instruction, item.targetPrompt].join(" ").toLowerCase();
@@ -299,6 +310,8 @@
       });
       grid.append(card);
       registerPreview(card, pair);
+      if (revealObserver) revealObserver.observe(card);
+      else card.classList.add("is-visible");
     });
     filterGallery();
   }
@@ -334,6 +347,11 @@
   if (!cases.length) return;
   renderHero();
   renderGallery();
+  document.querySelectorAll(".method-step, .evaluation-section, .resources-section").forEach(function (element) {
+    element.classList.add("reveal-item");
+    if (revealObserver) revealObserver.observe(element);
+    else element.classList.add("is-visible");
+  });
   // GitHub Pages or embedded browsers can occasionally miss the initial
   // IntersectionObserver callback after a cached navigation. Re-evaluate
   // visible cards once after layout so previews still begin reliably.
