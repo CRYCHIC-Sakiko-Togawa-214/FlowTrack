@@ -1156,70 +1156,70 @@
     }
   },
   {
-    "original": "it2v_edit_zjl/videos/0064_rollerblade.mp4",
-    "web": "assets/videos/roller-pikachu-source.mp4",
+    "original": "it2v_edit_zjl/videos/0097_A_bird.mp4",
+    "web": "assets/videos/eagle-nest-source.mp4",
     "original_metadata": {
       "programs": [],
       "streams": [
         {
-          "width": 864,
+          "width": 832,
           "height": 480,
           "r_frame_rate": "16/1",
-          "nb_frames": "35"
+          "nb_frames": "81"
         }
       ],
       "format": {
-        "duration": "2.188000",
-        "size": "273114"
+        "duration": "5.063000",
+        "size": "6004091"
       }
     },
     "web_metadata": {
       "programs": [],
       "streams": [
         {
-          "width": 864,
+          "width": 832,
           "height": 480,
           "r_frame_rate": "16/1",
-          "nb_frames": "35"
+          "nb_frames": "81"
         }
       ],
       "format": {
-        "duration": "2.188000",
-        "size": "269986"
+        "duration": "5.063000",
+        "size": "1399425"
       }
     }
   },
   {
-    "original": "it2v_edit_zjl/nips/FlowTrack/FlowTrack/edit2/0064_rollerblade/2_A Pikachu is rollerb.mp4",
-    "web": "assets/videos/roller-pikachu-ours.mp4",
+    "original": "it2v_edit_zjl/nips/FlowTrack/FlowTrack/edit1/0097_A_bird/1_An eagle is building.mp4",
+    "web": "assets/videos/eagle-nest-ours.mp4",
     "original_metadata": {
       "programs": [],
       "streams": [
         {
-          "width": 864,
+          "width": 832,
           "height": 480,
           "r_frame_rate": "16/1",
-          "nb_frames": "35"
+          "nb_frames": "81"
         }
       ],
       "format": {
-        "duration": "2.188000",
-        "size": "2876157"
+        "duration": "5.063000",
+        "size": "5442675"
       }
     },
     "web_metadata": {
       "programs": [],
       "streams": [
         {
-          "width": 864,
+          "width": 832,
           "height": 480,
           "r_frame_rate": "16/1",
-          "nb_frames": "35"
+          "nb_frames": "81"
         }
       ],
       "format": {
-        "duration": "2.188000",
-        "size": "542458"
+        "duration": "5.063000",
+        "size": "1175980"
       }
     }
   },
@@ -1632,8 +1632,8 @@
     }
   },
   {
-    "original": "it2v_edit_zjl/videos/0045_butterfly.mp4",
-    "web": "assets/videos/glass-butterfly-source.mp4",
+    "original": "it2v_edit_zjl/videos/0059_drift-straight.mp4",
+    "web": "assets/videos/carbon-drift-source.mp4",
     "original_metadata": {
       "programs": [],
       "streams": [
@@ -1641,12 +1641,12 @@
           "width": 864,
           "height": 480,
           "r_frame_rate": "16/1",
-          "nb_frames": "80"
+          "nb_frames": "50"
         }
       ],
       "format": {
-        "duration": "5.000000",
-        "size": "353525"
+        "duration": "3.125000",
+        "size": "737239"
       }
     },
     "web_metadata": {
@@ -1656,18 +1656,18 @@
           "width": 864,
           "height": 480,
           "r_frame_rate": "16/1",
-          "nb_frames": "80"
+          "nb_frames": "50"
         }
       ],
       "format": {
-        "duration": "5.000000",
-        "size": "371083"
+        "duration": "3.125000",
+        "size": "735952"
       }
     }
   },
   {
-    "original": "it2v_edit_zjl/nips/FlowTrack/FlowTrack/edit4/0045_butterfly/4_A vibrant glass blue.mp4",
-    "web": "assets/videos/glass-butterfly-ours.mp4",
+    "original": "it2v_edit_zjl/nips/FlowTrack/FlowTrack/edit4/0059_drift-straight/4_A carbon fiber red s.mp4",
+    "web": "assets/videos/carbon-drift-ours.mp4",
     "original_metadata": {
       "programs": [],
       "streams": [
@@ -1675,12 +1675,12 @@
           "width": 864,
           "height": 480,
           "r_frame_rate": "16/1",
-          "nb_frames": "80"
+          "nb_frames": "50"
         }
       ],
       "format": {
-        "duration": "5.000000",
-        "size": "2504629"
+        "duration": "3.125000",
+        "size": "4116129"
       }
     },
     "web_metadata": {
@@ -1690,12 +1690,12 @@
           "width": 864,
           "height": 480,
           "r_frame_rate": "16/1",
-          "nb_frames": "80"
+          "nb_frames": "50"
         }
       ],
       "format": {
-        "duration": "5.000000",
-        "size": "430563"
+        "duration": "3.125000",
+        "size": "1137503"
       }
     }
   },

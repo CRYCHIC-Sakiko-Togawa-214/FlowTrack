@@ -33,14 +33,14 @@ SELECTION = [
     ("dog-robot", "0057_dog", 2, "creative", "Retriever", "Robotic dog", "A robotic redesign with the original motion.", 1.0),
     ("wooden-motorbike", "0038_motorbike", 4, "material", "Motorbike", "Wooden motorbike", "Change the material through a fast ride.", 1.0),
     ("helicopter-ufo", "0035_helicopter", 2, "creative", "Helicopter", "UFO", "A graphic transformation in an open sky.", 1.0),
-    ("roller-pikachu", "0064_rollerblade", 2, "creative", "Rollerblader", "Pikachu", "A playful character edit with preserved movement.", 1.0),
+    ("eagle-nest", "0097_A_bird", 1, "subject", "Bird", "Eagle", "A precise subject change while the nest building continues.", 1.0),
     ("pink-burnout", "0014_burnout", 3, "color", "Black car", "Pink car", "Change the car color through smoke and motion.", 1.0),
     ("yellow-golf", "0013_golf", 3, "color", "Black shirt", "Yellow shirt", "A local wardrobe color change on the move.", 1.0),
     ("pink-boat", "0058_boat", 3, "color", "White boat", "Pink boat", "Change the hull color while preserving the wake.", 1.0),
     ("blue-duck", "0071_mallard-water", 3, "color", "Mallard", "Blue mallard", "A precise color change on rippling water.", 1.0),
     ("red-dress", "0011_lucia", 3, "color", "Black dress", "Red dress", "Change the dress color while keeping the walk.", 1.0),
     ("wooden-bus", "0079_A_bus", 4, "material", "Bus", "Wooden bus", "A material change through a rainy night.", 1.0),
-    ("glass-butterfly", "0045_butterfly", 4, "material", "Butterfly", "Glass butterfly", "A translucent material change in flight.", 1.0),
+    ("carbon-drift", "0059_drift-straight", 4, "material", "Red sports car", "Carbon-fiber sports car", "A material change through a fast drift.", 1.0),
     ("dog-sunglasses", "0089_A_dog", 5, "addition", "Dog", "Add sunglasses", "Add a clear accessory without losing the pose.", 1.0),
 ]
 

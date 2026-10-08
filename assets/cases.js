@@ -460,29 +460,29 @@ window.FLOWTRACK_CASES = [
     }
   },
   {
-    "id": "roller-pikachu",
-    "videoId": "0064_rollerblade",
-    "editType": 2,
-    "category": "creative",
-    "before": "Rollerblader",
-    "after": "Pikachu",
-    "note": "A playful character edit with preserved movement.",
-    "width": 864,
+    "id": "eagle-nest",
+    "videoId": "0097_A_bird",
+    "editType": 1,
+    "category": "subject",
+    "before": "Bird",
+    "after": "Eagle",
+    "note": "A precise subject change while the nest building continues.",
+    "width": 832,
     "height": 480,
-    "duration": 2.188,
+    "duration": 5.063,
     "fps": "16/1",
-    "frames": 35,
-    "instruction": "Replace the person with a Pikachu.",
-    "sourcePrompt": "A person is rollerblading energetically in front of a vibrant graffiti wall, performing a jump and landing smoothly. The camera remains fixed, capturing the dynamic movement against the colorful urban backdrop.",
-    "targetPrompt": "A Pikachu is rollerblading energetically in front of a vibrant graffiti wall, performing a jump and landing smoothly. The camera remains fixed, capturing the dynamic movement against the colorful urban backdrop.",
+    "frames": 81,
+    "instruction": "Change the bird to an eagle.",
+    "sourcePrompt": "A bird is building a nest in a tree, carefully arranging twigs and leaves. The camera zooms in slowly to capture the bird's meticulous work.",
+    "targetPrompt": "An eagle is building a nest in a tree, carefully arranging twigs and leaves. The camera zooms in slowly to capture the bird's meticulous work.",
     "media": {
       "source": {
-        "src": "assets/videos/roller-pikachu-source.mp4",
-        "poster": "assets/posters/roller-pikachu-source.jpg"
+        "src": "assets/videos/eagle-nest-source.mp4",
+        "poster": "assets/posters/eagle-nest-source.jpg"
       },
       "ours": {
-        "src": "assets/videos/roller-pikachu-ours.mp4",
-        "poster": "assets/posters/roller-pikachu-ours.jpg"
+        "src": "assets/videos/eagle-nest-ours.mp4",
+        "poster": "assets/posters/eagle-nest-ours.jpg"
       }
     }
   },
@@ -649,29 +649,29 @@ window.FLOWTRACK_CASES = [
     }
   },
   {
-    "id": "glass-butterfly",
-    "videoId": "0045_butterfly",
+    "id": "carbon-drift",
+    "videoId": "0059_drift-straight",
     "editType": 4,
     "category": "material",
-    "before": "Butterfly",
-    "after": "Glass butterfly",
-    "note": "A translucent material change in flight.",
+    "before": "Red sports car",
+    "after": "Carbon-fiber sports car",
+    "note": "A material change through a fast drift.",
     "width": 864,
     "height": 480,
-    "duration": 5.0,
+    "duration": 3.125,
     "fps": "16/1",
-    "frames": 80,
-    "instruction": "Change the material of the butterfly from a living creature to glass.",
-    "sourcePrompt": "A vibrant blue butterfly flutters gracefully around a leafy plant in a sunlit garden. The camera remains fixed, capturing the delicate movements of the butterfly against a backdrop of greenery and a rustic stone structure.",
-    "targetPrompt": "A vibrant glass blue butterfly flutters gracefully around a leafy plant in a sunlit garden. The camera remains fixed, capturing the delicate movements of the butterfly against a backdrop of greenery and a rustic stone structure.",
+    "frames": 50,
+    "instruction": "Add carbon fiber to the car's description.",
+    "sourcePrompt": "A red sports car is drifting skillfully around a race track, leaving tire marks on the asphalt. The camera follows the car's movement quickly, capturing the dynamic motion and the surrounding race track environment.",
+    "targetPrompt": "A carbon fiber red sports car is drifting skillfully around a race track, leaving tire marks on the asphalt. The camera follows the car's movement quickly, capturing the dynamic motion and the surrounding race track environment.",
     "media": {
       "source": {
-        "src": "assets/videos/glass-butterfly-source.mp4",
-        "poster": "assets/posters/glass-butterfly-source.jpg"
+        "src": "assets/videos/carbon-drift-source.mp4",
+        "poster": "assets/posters/carbon-drift-source.jpg"
       },
       "ours": {
-        "src": "assets/videos/glass-butterfly-ours.mp4",
-        "poster": "assets/posters/glass-butterfly-ours.jpg"
+        "src": "assets/videos/carbon-drift-ours.mp4",
+        "poster": "assets/posters/carbon-drift-ours.jpg"
       }
     }
   },
