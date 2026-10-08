@@ -260,7 +260,7 @@
         if (entry) entry.videos.forEach(function (video) { video.pause(); });
       }
     });
-    $("#gallery-count").textContent = total ? "Showing " + shown + " of " + total + " examples" : "No matching examples. Try another search.";
+    $("#gallery-count").textContent = total ? "Showing selected examples" : "No matching examples. Try another search.";
     $("#load-more").hidden = shown >= total;
   }
 
