@@ -279,6 +279,16 @@
   if (!cases.length) return;
   renderHero();
   renderGallery();
+  // GitHub Pages or embedded browsers can occasionally miss the initial
+  // IntersectionObserver callback after a cached navigation. Re-evaluate
+  // visible cards once after layout so previews still begin reliably.
+  setTimeout(function () {
+    previews.forEach(function (entry) {
+      var rect = entry.element.getBoundingClientRect();
+      entry.visible = rect.bottom > 0 && rect.top < window.innerHeight;
+      if (entry.visible) startPreview(entry);
+    });
+  }, 350);
 
   document.querySelectorAll(".filter-button").forEach(function (button) {
     button.addEventListener("click", function () {
