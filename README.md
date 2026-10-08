@@ -14,7 +14,8 @@ python3 /home/maviuserzjl/zjl_edit/it2v_edit_zjl/nips/demo/serve.py
 
 - 精选正面案例覆盖主体、创意、颜色、材质和添加五类编辑。
 - 动态结果墙：桌面每行两组，手机每行一组，可继续展开浏览。
-- 主页面直接展示多案例结果墙；每张卡片展示 Source / FlowTrack 双列预览，突出 FlowTrack 的实际编辑效果。
+- 主页面直接展示多案例结果墙；每张卡片展示 Source / FlowTrack 双列预览，点击卡片可在当前页面打开同步双视频聚焦查看层。
+- 新增 Method 区域，用三步图示解释 observe、carry、support-aware execute。
 - 搜索、分类筛选、暂停动态预览；点击卡片只更新选中状态并保持结果墙位置。
 - 完整 FiVE-Bench Table 1、论文和代码下载。
 - 桌面及移动端适配，离屏暂停，尊重系统减少动态效果设置。

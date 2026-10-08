@@ -11,6 +11,9 @@
   var motionEnabled = !reducedMotion.matches;
   var galleryFilter = "all", galleryQuery = "", galleryLimit = 24;
   var selectedId = null;
+  var lightbox = $("#result-lightbox");
+  var lightboxVideos = [$("#lightbox-source"), $("#lightbox-ours")];
+  var lightboxPlaying = false;
 
   function updateURL(id) {
     var url = new URL(window.location.href);
@@ -30,6 +33,57 @@
       var gallery = $("#gallery");
       if (gallery) gallery.scrollIntoView({ behavior: reducedMotion.matches ? "instant" : "smooth", block: "start" });
     }
+  }
+
+  function setLightboxPlayLabel() {
+    var button = $("#lightbox-play");
+    if (!button) return;
+    button.querySelector("use").setAttribute("href", lightboxPlaying ? "#i-pause" : "#i-play");
+    button.querySelector("span").textContent = lightboxPlaying ? "Pause result" : "Play result";
+  }
+
+  function closeLightbox() {
+    if (!lightbox || lightbox.hidden) return;
+    lightbox.hidden = true;
+    lightboxVideos.forEach(function (video) { video.pause(); video.removeAttribute("src"); video.load(); });
+    lightboxPlaying = false;
+    setLightboxPlayLabel();
+    document.body.classList.remove("lightbox-open");
+  }
+
+  async function openLightbox(item) {
+    if (!lightbox || !item) return;
+    selectCase(item.id, false, true);
+    $("#lightbox-category").textContent = categoryNames[item.category] || "FLOWTRACK RESULT";
+    $("#lightbox-title").textContent = item.before + " → " + item.after;
+    $("#lightbox-instruction").textContent = item.instruction;
+    lightboxVideos.forEach(function (video, index) {
+      var media = item.media[index === 0 ? "source" : "ours"];
+      video.src = media.src;
+      video.poster = media.poster;
+      video.load();
+    });
+    lightbox.hidden = false;
+    lightboxPlaying = false;
+    setLightboxPlayLabel();
+    document.body.classList.add("lightbox-open");
+    $("#lightbox-close").focus();
+  }
+
+  async function toggleLightboxPlayback() {
+    if (!lightbox || lightbox.hidden) return;
+    if (lightboxPlaying) {
+      lightboxVideos.forEach(function (video) { video.pause(); });
+      lightboxPlaying = false;
+      setLightboxPlayLabel();
+      return;
+    }
+    var ready = lightboxVideos.every(function (video) { return video.readyState >= 2; });
+    if (!ready) await Promise.all(lightboxVideos.map(function (video) { return new Promise(function (resolve) { video.addEventListener("canplay", resolve, { once: true }); }); }));
+    lightboxVideos.forEach(function (video) { video.currentTime = 0; });
+    await Promise.allSettled(lightboxVideos.map(function (video) { return video.play(); }));
+    lightboxPlaying = true;
+    setLightboxPlayLabel();
   }
 
   function previewShouldPlay(entry) {
@@ -237,6 +291,7 @@
         // Keep the reader anchored to the result wall when selecting a card.
         var keepScroll = galleryScrollY === null ? window.scrollY : galleryScrollY;
         selectCase(item.id, false, true);
+        openLightbox(item);
         card.blur();
         window.scrollTo({ top: keepScroll, left: 0, behavior: "instant" });
         requestAnimationFrame(function () { window.scrollTo({ top: keepScroll, left: 0, behavior: "instant" }); });
@@ -289,6 +344,20 @@
       if (entry.visible) startPreview(entry);
     });
   }, 350);
+
+  $("#lightbox-close").addEventListener("click", closeLightbox);
+  lightbox.addEventListener("click", function (event) { if (event.target.hasAttribute("data-lightbox-close")) closeLightbox(); });
+  $("#lightbox-play").addEventListener("click", toggleLightboxPlayback);
+  lightboxVideos[0].addEventListener("timeupdate", function () {
+    if (!lightboxPlaying) return;
+    var time = lightboxVideos[0].currentTime;
+    if (Math.abs(lightboxVideos[1].currentTime - time) > .06) lightboxVideos[1].currentTime = time;
+  });
+  lightboxVideos[0].addEventListener("ended", function () {
+    lightboxVideos.forEach(function (video) { video.currentTime = 0; });
+    if (lightboxPlaying) toggleLightboxPlayback();
+  });
+  document.addEventListener("keydown", function (event) { if (event.key === "Escape") closeLightbox(); });
 
   document.querySelectorAll(".filter-button").forEach(function (button) {
     button.addEventListener("click", function () {
