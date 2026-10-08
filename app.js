@@ -36,19 +36,65 @@
     return motionEnabled && entry.visible && !entry.element.hidden && !document.hidden;
   }
 
+  function keepPreviewInSync(entry) {
+    if (!previewShouldPlay(entry) || !entry.playingWanted) return;
+    var master = entry.videos[0];
+    var time = master.currentTime || 0;
+    entry.videos.slice(1).forEach(function (video) {
+      if (video.readyState >= 2 && !video.seeking && Math.abs(video.currentTime - time) > .08) {
+        try { video.currentTime = time; } catch (_) {}
+      }
+      if (video.readyState >= 2 && video.paused) {
+        video.play().catch(function () {});
+      }
+    });
+  }
+
   async function startPreview(entry) {
-    if (!previewShouldPlay(entry)) return;
+    if (!previewShouldPlay(entry)) {
+      entry.playingWanted = false;
+      entry.videos.forEach(function (video) { video.pause(); });
+      return;
+    }
     if (!entry.loaded) {
       entry.loaded = true;
       entry.videos.forEach(function (video) { video.src = video.dataset.src; video.load(); });
     }
+    if (entry.starting) return;
     if (!entry.videos.every(function (video) { return video.readyState >= 2; })) return;
-    var time = entry.videos[0].currentTime;
-    entry.videos.slice(1).forEach(function (video) {
-      if (Math.abs(video.currentTime - time) > .08) video.currentTime = time;
-    });
-    await Promise.allSettled(entry.videos.map(function (video) { return video.play(); }));
-    if (!previewShouldPlay(entry)) entry.videos.forEach(function (video) { video.pause(); });
+    entry.starting = true;
+    try {
+      var master = entry.videos[0];
+      var time = master.ended ? 0 : master.currentTime;
+      entry.videos.forEach(function (video) {
+        if (video.readyState >= 1 && Math.abs(video.currentTime - time) > .08) video.currentTime = time;
+        video.muted = true;
+      });
+      entry.playingWanted = true;
+      // Start both videos in the same task. A source video can otherwise remain
+      // paused after the edited result wins the autoplay race.
+      await Promise.allSettled(entry.videos.map(function (video) { return video.play(); }));
+      // Some Chromium builds resolve one autoplay promise while the paired
+      // video remains paused. Explicitly resume every ready track and retry
+      // once after the media pipeline has had a frame to settle.
+      entry.videos.forEach(function (video) {
+        if (video.readyState >= 2 && video.paused) video.play().catch(function () {});
+      });
+      keepPreviewInSync(entry);
+      setTimeout(function () {
+        if (!previewShouldPlay(entry) || !entry.playingWanted) return;
+        entry.videos.forEach(function (video) {
+          if (video.readyState >= 2 && video.paused) video.play().catch(function () {});
+        });
+        keepPreviewInSync(entry);
+      }, 120);
+    } finally {
+      entry.starting = false;
+    }
+    if (!previewShouldPlay(entry)) {
+      entry.playingWanted = false;
+      entry.videos.forEach(function (video) { video.pause(); });
+    }
   }
 
   var previewObserver = "IntersectionObserver" in window ? new IntersectionObserver(function (entries) {
@@ -57,24 +103,33 @@
       if (!entry) return;
       entry.visible = observed.isIntersecting;
       if (entry.visible) startPreview(entry);
-      else entry.videos.forEach(function (video) { video.pause(); });
+      else {
+        entry.playingWanted = false;
+        entry.videos.forEach(function (video) { video.pause(); });
+      }
     });
   }, { threshold: .2 }) : null;
 
   function registerPreview(element, pair) {
-    var entry = { element: element, videos: pair, visible: !previewObserver, loaded: false };
+    var entry = { element: element, videos: pair, visible: !previewObserver, loaded: false, starting: false, playingWanted: false };
     previews.set(element, entry);
     pair.forEach(function (video) {
       video.addEventListener("loadeddata", function () { startPreview(entry); });
+      video.addEventListener("canplay", function () { startPreview(entry); });
+      video.addEventListener("waiting", function () {
+        if (previewShouldPlay(entry)) setTimeout(function () { startPreview(entry); }, 120);
+      });
+      video.addEventListener("pause", function () {
+        if (entry.playingWanted && previewShouldPlay(entry)) setTimeout(function () { startPreview(entry); }, 80);
+      });
       video.addEventListener("error", function () { element.classList.add("preview-error"); });
     });
     pair[0].addEventListener("timeupdate", function () {
       if (pair[0].paused) return;
-      pair.slice(1).forEach(function (video) {
-        if (video.readyState >= 2 && !video.seeking && Math.abs(video.currentTime - pair[0].currentTime) > .10) video.currentTime = pair[0].currentTime;
-      });
+      keepPreviewInSync(entry);
     });
     pair[0].addEventListener("ended", function () {
+      entry.playingWanted = false;
       pair.forEach(function (video) { if (video.readyState >= 1) video.currentTime = 0; });
       startPreview(entry);
     });
@@ -214,7 +269,10 @@
     $("#gallery-motion").setAttribute("aria-pressed", String(motionEnabled));
     previews.forEach(function (entry) {
       if (previewShouldPlay(entry)) startPreview(entry);
-      else entry.videos.forEach(function (video) { video.pause(); });
+      else {
+        entry.playingWanted = false;
+        entry.videos.forEach(function (video) { video.pause(); });
+      }
     });
   }
 
