@@ -18,7 +18,7 @@ python3 /home/maviuserzjl/zjl_edit/it2v_edit_zjl/nips/demo/serve.py
 - 新增 Method 区域，用三步图示解释 observe、carry、support-aware execute。
 - 增强视觉动效：案例和方法区滚动入场，视频卡片提供景深与光带反馈，方法示意动态绘制，聚焦查看层采用分层缩放过渡；减少动态效果设置下自动关闭动画。
 - 搜索、分类筛选、暂停动态预览；点击卡片只更新选中状态并保持结果墙位置。
-- 完整 FiVE-Bench Table 1、论文和代码下载。
+- 完整 FiVE-Bench 区域评测指标表、论文和代码下载。
 - 桌面及移动端适配，离屏暂停，尊重系统减少动态效果设置。
 
 ## 内容依据
@@ -27,7 +27,7 @@ Demo 只展示经过逐帧人工抽查的正面结果；未达到展示标准的
 
 新增案例覆盖论文 Figure 1、Figure 3 以及 Appendix E.2 的定性视频；页面只展示 FlowTrack 输出和对应 Source。
 
-论文依据 `../34925_FlowTrack_Controlling_Ed.pdf`，方法核对 `../code/wan/text2video.py` 的 carrying 与 Otsu support 实现。评测保留全部原始数值、方向和 CLIP trade-off，不将精选数量与完整评测数量混写。
+论文依据 `../34925_FlowTrack_Controlling_Ed.pdf`，方法核对 `../code/wan/text2video.py` 的 carrying 与 Otsu support 实现。评测采用用户提供的最新区域指标表，完整保留七项指标的名称、四位小数、数值尺度与优劣方向；FlowTrack 在该表全部七项指标上取得最佳值。上方摘要卡片保留两位小数，不将精选数量与完整评测数量混写。
 
 Source 来自 `../../videos/`，FlowTrack 来自 `../FlowTrack/FlowTrack/edit1…edit6/`。完整 prompt 来自工作区 `bench/FiVE-Bench/files/flowtrack_ablation_direct_execution_edit*_existing.json`。
 

@@ -11,7 +11,7 @@
   <meta property="og:image" content="assets/posters/beach-zebra-ours.jpg">
   <title>FlowTrack · NeurIPS 2026</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=region-metrics-20261009">
   <script defer src="assets/cases.js?v=enhanced1010"></script>
   <script defer src="app.js?v=enhanced1010"></script>
 </head>
@@ -107,28 +107,28 @@
       <div class="section-topline"><span class="eyebrow">BEYOND THE EYE TEST</span><span class="eyebrow">FiVE-BENCH</span></div>
       <div class="evaluation-heading"><h2 id="evaluation-title">Consistency, <em>measured.</em></h2><p>Evaluated on the full FiVE-Bench protocol:<br><strong>419 edits</strong> across <strong>6 editing types</strong>.</p></div>
       <div class="metric-highlights">
-        <article><span class="eyebrow">MOTION FIDELITY ↑</span><div class="metric-value">86.09<span>MFS</span></div><p>Keep the source moving as it should.</p></article>
-        <article><span class="eyebrow">UNEDITED-REGION SIMILARITY ↑</span><div class="metric-value">90.21<span>SSIM</span></div><p>Preserve content outside the edit.</p></article>
-        <article><span class="eyebrow">STRUCTURAL DEVIATION ↓</span><div class="metric-value">5.98<span>distance</span></div><p>Stay close to the source layout.</p></article>
+        <article><span class="eyebrow">MOTION FIDELITY ↑</span><div class="metric-value">84.23<span>MFS-edit</span></div><p>Preserve motion within the edited region.</p></article>
+        <article><span class="eyebrow">UNEDITED-REGION SIMILARITY ↑</span><div class="metric-value">90.21<span>SSIM-unedit</span></div><p>Preserve content outside the edit.</p></article>
+        <article><span class="eyebrow">STRUCTURAL DEVIATION ↓</span><div class="metric-value">5.98<span>Structure-global</span></div><p>Stay close to the source layout.</p></article>
       </div>
-      <div class="table-header"><h3>The full comparison</h3><span class="eyebrow">TABLE 1 · OVERALL RESULTS</span></div>
+      <div class="table-header"><h3>The full comparison</h3><span class="eyebrow">REGION-AWARE METRICS</span></div>
       <div class="table-scroll" tabindex="0" role="region" aria-label="Scrollable FiVE-Bench results table">
         <table class="results-table">
-          <caption class="sr-only">Overall FiVE-Bench results on 419 edits. Arrows indicate whether a higher or lower value is better. Bold values are best.</caption>
-          <thead><tr><th scope="col">Method</th><th scope="col">MFS ↑</th><th scope="col">CLIP ↑</th><th scope="col">PSNR ↑</th><th scope="col">LPIPS ↓</th><th scope="col">MSE ↓</th><th scope="col">SSIM ↑</th><th scope="col">Structure ↓</th></tr></thead>
+          <caption class="sr-only">Region-aware FiVE-Bench results on 419 edits. Arrows indicate whether a higher or lower value is better. Bold values are best.</caption>
+          <thead><tr><th scope="col">Method</th><th scope="col">MFS-edit ↑</th><th scope="col">CLIP-edit ↑</th><th scope="col">PSNR-unedit ↑</th><th scope="col">LPIPS-unedit ↓</th><th scope="col">MSE-unedit ↓</th><th scope="col">SSIM-unedit ↑</th><th scope="col">Structure-global ↓</th></tr></thead>
           <tbody>
-            <tr><th scope="row">FateZero</th><td>73.7298</td><td>26.0856</td><td>18.6122</td><td>236.8776</td><td>155.9120</td><td>69.1964</td><td>55.3834</td></tr>
-            <tr><th scope="row">FLATTEN</th><td>73.9243</td><td>26.9928</td><td>16.3716</td><td>269.9812</td><td>255.4401</td><td>62.9804</td><td>71.3739</td></tr>
-            <tr><th scope="row">FlowDirector</th><td>85.2422</td><td><strong>27.6559</strong></td><td>27.4104</td><td>52.4975</td><td>22.9882</td><td>87.7195</td><td>8.9845</td></tr>
-            <tr><th scope="row">RAVE</th><td>82.3514</td><td>27.3857</td><td>20.8132</td><td>137.9647</td><td>96.9810</td><td>78.1291</td><td>25.2783</td></tr>
-            <tr><th scope="row">TokenFlow</th><td>81.1081</td><td>26.4377</td><td>23.0263</td><td>137.5256</td><td>57.7608</td><td>75.4634</td><td>26.6105</td></tr>
-            <tr><th scope="row">Wan-Edit</th><td>83.1296</td><td>26.1248</td><td>25.5700</td><td>71.1971</td><td>39.8569</td><td>83.4118</td><td>12.2960</td></tr>
-            <tr><th scope="row">DFVEdit</th><td>82.8349</td><td>27.1560</td><td>25.1480</td><td>72.4622</td><td>37.9288</td><td>82.9375</td><td>11.9711</td></tr>
-            <tr class="ours-row"><th scope="row">FlowTrack <span>OURS</span></th><td><strong>86.0860</strong></td><td>27.4871</td><td><strong>29.2961</strong></td><td><strong>39.5408</strong></td><td><strong>15.3677</strong></td><td><strong>90.2092</strong></td><td><strong>5.9808</strong></td></tr>
+            <tr><th scope="row">FateZero</th><td>68.7316</td><td>20.7924</td><td>18.6122</td><td>236.8776</td><td>155.9120</td><td>69.1964</td><td>55.3834</td></tr>
+            <tr><th scope="row">FLATTEN</th><td>68.5287</td><td>21.4840</td><td>16.3716</td><td>269.9812</td><td>255.4401</td><td>62.9804</td><td>71.3739</td></tr>
+            <tr><th scope="row">FlowDirector</th><td>83.1143</td><td>21.8896</td><td>27.4104</td><td>52.4975</td><td>22.9882</td><td>87.7195</td><td>8.9845</td></tr>
+            <tr><th scope="row">RAVE</th><td>80.8343</td><td>21.8726</td><td>20.8132</td><td>137.9647</td><td>96.9810</td><td>78.1291</td><td>25.2783</td></tr>
+            <tr><th scope="row">TokenFlow</th><td>79.7568</td><td>20.8532</td><td>23.0263</td><td>137.5256</td><td>57.7608</td><td>75.4634</td><td>26.6105</td></tr>
+            <tr><th scope="row">Wan-Edit</th><td>81.2604</td><td>20.7129</td><td>25.5700</td><td>71.1971</td><td>39.8569</td><td>83.4118</td><td>12.2960</td></tr>
+            <tr><th scope="row">DFVEdit</th><td>81.1092</td><td>21.5048</td><td>25.1480</td><td>72.4622</td><td>37.9288</td><td>82.9375</td><td>11.9711</td></tr>
+            <tr class="ours-row"><th scope="row">FlowTrack <span>OURS</span></th><td><strong>84.2349</strong></td><td><strong>21.8909</strong></td><td><strong>29.2961</strong></td><td><strong>39.5408</strong></td><td><strong>15.3677</strong></td><td><strong>90.2092</strong></td><td><strong>5.9808</strong></td></tr>
           </tbody>
         </table>
       </div>
-      <p class="evaluation-note">FlowTrack leads the six preservation metrics in this comparison, with a small trade-off in target-prompt alignment: FlowDirector has the highest CLIP score. Values and metric scaling follow Table 1 of the paper.</p>
+      <p class="evaluation-note">FlowTrack achieves the best value on all seven reported metrics. MFS-edit and CLIP-edit evaluate the edited region; PSNR-unedit, LPIPS-unedit, MSE-unedit, and SSIM-unedit measure preservation outside the edit; Structure-global measures structural deviation across the full frame. ↑ Higher is better. ↓ Lower is better. Bold values indicate the best result in each column.</p>
     </section>
 
     <section class="resources-section container" id="resources" aria-labelledby="resources-title">
