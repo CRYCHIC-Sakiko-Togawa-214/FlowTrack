@@ -1,0 +1,22 @@
+# Research inference only. The static demo and CI do not use this file.
+# Install a matched CUDA-enabled torch/torchvision pair separately for your hardware.
+# These are source-derived dependency inventory, not a GPU-tested lockfile.
+diffusers
+transformers
+accelerate
+einops
+easydict
+ftfy
+regex
+numpy
+opencv-python
+Pillow
+imageio
+imageio-ffmpeg
+tqdm
+scipy
+requests
+packaging
+dashscope
+sentencepiece
+safetensors

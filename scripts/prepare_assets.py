@@ -3,6 +3,7 @@
 import argparse
 from concurrent.futures import ThreadPoolExecutor
 import json
+import os
 from pathlib import Path
 import shutil
 import subprocess
@@ -83,35 +84,58 @@ def prepare_video(job, force=False):
         run(["ffmpeg", "-nostdin", "-v", "error", "-y",
              "-ss", str(poster_time), "-i", str(original),
              "-frames:v", "1", "-q:v", "3", str(poster)])
-    return {"original": str(original.relative_to(WORKSPACE)),
+    return {"original": os.path.relpath(original, WORKSPACE),
             "web": str(video.relative_to(SITE)), "original_metadata": probe(original),
             "web_metadata": probe(video)}
 
 
+def find_result(results_dir, edit, video_id):
+    matches = sorted((results_dir / f"edit{edit}" / video_id).glob("*.mp4"))
+    if len(matches) != 1:
+        raise ValueError(f"Expected exactly one result for edit{edit}/{video_id}; found {len(matches)}")
+    return matches[0]
+
+
 def main():
+    global WORKSPACE
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--force", action="store_true", help="Re-encode existing assets.")
+    parser.add_argument("--workspace", type=Path, default=WORKSPACE,
+                        help="Root containing it2v_edit_zjl/ and bench/FiVE-Bench/.")
+    parser.add_argument("--source-dir", type=Path, help="Original MP4 directory.")
+    parser.add_argument("--results-dir", type=Path, help="Directory containing edit1…edit6 results.")
+    parser.add_argument("--prompts-dir", type=Path, help="FiVE-Bench JSON prompt directory.")
+    parser.add_argument("--paper", type=Path, help="Paper PDF to publish.")
+    parser.add_argument("--code-dir", type=Path, help="Research implementation to package.")
     options = parser.parse_args()
+    WORKSPACE = options.workspace.expanduser().resolve()
+    project = WORKSPACE / "it2v_edit_zjl"
+    nips = project / "nips"
+    source_dir = (options.source_dir or project / "videos").expanduser().resolve()
+    results_dir = (options.results_dir or nips / "FlowTrack/FlowTrack").expanduser().resolve()
+    prompts_dir = (options.prompts_dir or WORKSPACE / "bench/FiVE-Bench/files").expanduser().resolve()
+    paper = (options.paper or nips / "34925_FlowTrack_Controlling_Ed.pdf").expanduser().resolve()
+    code_dir = (options.code_dir or nips / "code").expanduser().resolve()
+    for name, path in (("source directory", source_dir), ("result directory", results_dir),
+                       ("prompt directory", prompts_dir), ("code directory", code_dir)):
+        if not path.is_dir():
+            parser.error(f"Missing {name}: {path}. Supply the corresponding path option.")
+    if not paper.is_file():
+        parser.error(f"Missing paper: {paper}. Supply --paper.")
+    if not shutil.which("ffmpeg") or not shutil.which("ffprobe"):
+        parser.error("FFmpeg and FFprobe must be available on PATH.")
     ASSETS.mkdir(parents=True, exist_ok=True)
-    # Keep the published bundle aligned with the curated positive-only selection.
-    selected_ids = {row[0] for row in SELECTION}
-    for folder in (ASSETS / "videos", ASSETS / "posters"):
-        if folder.exists():
-            for path in folder.iterdir():
-                if path.is_file() and (path.stem.endswith("-baseline") or path.stem.rsplit("-", 1)[0] not in selected_ids):
-                    path.unlink()
     prompts = {}
     data, jobs = [], []
     for slug, video_id, edit, category, before, after, note, poster_time in SELECTION:
         if edit not in prompts:
-            path = WORKSPACE / "bench/FiVE-Bench/files" / (
+            path = prompts_dir / (
                 f"flowtrack_ablation_direct_execution_edit{edit}_existing.json")
             prompts[edit] = {item["id"]: item for item in json.loads(path.read_text())}
         prompt = prompts[edit][video_id]
         original_paths = {
-            "source": PROJECT / "videos" / (video_id + ".mp4"),
-            "ours": next((NIPS / "FlowTrack/FlowTrack" / f"edit{edit}" / video_id).glob("*.mp4")),
-            
+            "source": source_dir / (video_id + ".mp4"),
+            "ours": find_result(results_dir, edit, video_id),
         }
         metadata = [probe(path) for path in original_paths.values()]
         shapes = {(m["streams"][0]["width"], m["streams"][0]["height"],
@@ -134,17 +158,25 @@ def main():
             jobs.append((path, web, poster, poster_time))
         data.append(case)
 
+    # Keep the published bundle aligned with the curated positive-only selection.
+    selected_ids = {row[0] for row in SELECTION}
+    for folder in (ASSETS / "videos", ASSETS / "posters"):
+        if folder.exists():
+            for path in folder.iterdir():
+                if path.is_file() and (path.stem.endswith("-baseline") or path.stem.rsplit("-", 1)[0] not in selected_ids):
+                    path.unlink()
+
     with ThreadPoolExecutor(max_workers=3) as executor:
         provenance = list(executor.map(lambda job: prepare_video(job, options.force), jobs))
     (ASSETS / "cases.js").write_text(
         "// Prepared from matched FiVE-Bench source videos and actual method outputs.\n"
         "window.FLOWTRACK_CASES = " + json.dumps(data, ensure_ascii=False, indent=2) + ";\n")
     (ASSETS / "provenance.json").write_text(json.dumps(provenance, indent=2))
-    shutil.copyfile(NIPS / "34925_FlowTrack_Controlling_Ed.pdf", ASSETS / "FlowTrack-paper.pdf")
+    shutil.copyfile(paper, ASSETS / "FlowTrack-paper.pdf")
     with zipfile.ZipFile(ASSETS / "FlowTrack-code.zip", "w", zipfile.ZIP_DEFLATED) as archive:
-        for path in sorted((NIPS / "code").rglob("*")):
+        for path in sorted(code_dir.rglob("*")):
             if path.is_file() and not any(part in {".git", "__pycache__"} for part in path.parts):
-                archive.write(path, "FlowTrack/" + str(path.relative_to(NIPS / "code")))
+                archive.write(path, "FlowTrack/" + str(path.relative_to(code_dir)))
     total = sum(path.stat().st_size for path in (ASSETS / "videos").glob("*.mp4"))
     print(f"Prepared {len(data)} matched examples, {len(jobs)} videos, {total / 1024**2:.1f} MiB of video.")
 

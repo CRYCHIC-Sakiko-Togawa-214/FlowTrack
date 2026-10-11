@@ -1,63 +1,92 @@
-# FlowTrack demo 页面
+# FlowTrack
 
-以真实视频编辑效果为核心的静态英文论文展示页，无需 npm、模型权重或推理服务。
+**Controlling Edit-Signal Execution in Inversion-Free Flow Video Editing**
 
-## 本地预览
+[![Repository checks](https://github.com/CRYCHIC-Sakiko-Togawa-214/FlowTrack/actions/workflows/ci.yml/badge.svg)](https://github.com/CRYCHIC-Sakiko-Togawa-214/FlowTrack/actions/workflows/ci.yml)
+[![Demo](https://img.shields.io/badge/demo-GitHub%20Pages-blue)](https://crychic-sakiko-togawa-214.github.io/FlowTrack/)
 
-```sh
-python3 /home/maviuserzjl/zjl_edit/it2v_edit_zjl/nips/demo/serve.py
-```
+A self-contained research project page with synchronized source/FlowTrack video previews,
+category filters, a method overview, and FiVE-Bench region-aware evaluation results.
+The repository also includes the Python research implementation in `edit.py` and `wan/`.
 
-访问 http://127.0.0.1:8765/ 。其他端口可通过 `--port 8080` 指定。服务支持 byte-range 请求，便于拖动视频时间轴。
+**[Live demo](https://crychic-sakiko-togawa-214.github.io/FlowTrack/)** ·
+**[Paper](assets/FlowTrack-paper.pdf)** · **[Implementation](docs/INFERENCE.md)**
 
-## 页面功能
+## Quick start
 
-- 精选正面案例覆盖主体、创意、颜色、材质和添加五类编辑。
-- 动态结果墙：桌面每行两组，手机每行一组，可继续展开浏览。
-- 主页面直接展示多案例结果墙；每张卡片展示 Source / FlowTrack 双列预览，点击卡片可在当前页面打开同步双视频聚焦查看层。
-- 新增 Method 区域，用三步图示解释 observe、carry、support-aware execute。
-- 增强视觉动效：案例和方法区滚动入场，视频卡片提供景深与光带反馈，方法示意动态绘制，聚焦查看层采用分层缩放过渡；减少动态效果设置下自动关闭动画。
-- 搜索、分类筛选、暂停动态预览；点击卡片只更新选中状态并保持结果墙位置。
-- 完整 FiVE-Bench 区域评测指标表、论文和代码下载。
-- 桌面及移动端适配，离屏暂停，尊重系统减少动态效果设置。
-
-## 内容依据
-
-Demo 只展示经过逐帧人工抽查的正面结果；未达到展示标准的添加、删除和不稳定编辑已从选择清单与静态资源中移除。
-
-新增案例覆盖论文 Figure 1、Figure 3 以及 Appendix E.2 的定性视频；页面只展示 FlowTrack 输出和对应 Source。
-
-论文依据 `../34925_FlowTrack_Controlling_Ed.pdf`，方法核对 `../code/wan/text2video.py` 的 carrying 与 Otsu support 实现。评测采用用户提供的最新区域指标表，完整保留七项指标的名称、四位小数、数值尺度与优劣方向；FlowTrack 在该表全部七项指标上取得最佳值。上方摘要卡片保留两位小数，不将精选数量与完整评测数量混写。
-
-Source 来自 `../../videos/`，FlowTrack 来自 `../FlowTrack/FlowTrack/edit1…edit6/`。完整 prompt 来自工作区 `bench/FiVE-Bench/files/flowtrack_ablation_direct_execution_edit*_existing.json`。
-
-未使用临时参数扫描、其他论文结果或合成占位视频。每例的 Source / FlowTrack 视频具有相同分辨率、帧率、帧数与时长。只做 H.264 CRF 22 网页重编码和 faststart，不裁切、插帧或改变原始速度。图库封面裁切仅影响卡片显示；页面直接以结果墙作为主要展示区域。
-
-约 52 段网页视频，体积随筛选结果自动生成。首屏与结果墙的动态预览只在进入视口时加载，并在离屏时暂停。素材映射和 metadata 见 `assets/provenance.json`。
-
-`assets/FlowTrack-code.zip` 打包 `../code/`，排除 `.git` 和缓存，不包含模型权重。当前 GitHub 地址无法公开访问，因此使用本地代码下载；公开仓库就绪后可替换下载链接。
-
-当前 PDF 仍是匿名投稿版，页面未编造作者、机构、arXiv、DOI 或 BibTeX。正式信息就绪后，在 `index.html` 补入作者机构，并替换 `assets/FlowTrack-paper.pdf`。
-
-## 更新和部署
-
-修改 `scripts/prepare_assets.py` 中的 `SELECTION` 后，在完整工作区执行：
+The website needs only Python 3.9+ and a modern browser. No npm installation, frontend
+build, model checkpoint, or GPU is required to view the demo.
 
 ```sh
-python3 it2v_edit_zjl/nips/demo/scripts/prepare_assets.py
+git clone --depth 1 https://github.com/CRYCHIC-Sakiko-Togawa-214/FlowTrack.git
+cd FlowTrack
+python3 serve.py
 ```
 
-使用 `--force` 可重新编码已有视频。需要 FFmpeg / FFprobe。脚本检查素材匹配、生成视频和封面、更新案例数据和来源记录，复制论文并打包实现。
+Open <http://127.0.0.1:8765/>. Use `--port 8080` for another port. The local server
+supports byte-range requests for video seeking and binds to loopback by default.
+The clone includes large research media; use a sparse checkout for source-only maintenance.
 
-发布时将整个 demo 目录上传至 GitHub Pages、Netlify 或静态 HTTP 服务即可，无需构建；相对资源路径支持子目录部署。`serve.py`、`scripts/`、README 无需上传。
+## What is included
 
-## 设计参考
+The published catalog has **37 curated cases** and **74 paired videos**, covering subject,
+creative, color, material, and addition edits. These are selected qualitative results,
+not the complete evaluation dataset. Each source/result pair has matching resolution,
+frame rate, frame count, and duration. Delivery videos use H.264 CRF 22 with faststart;
+there is no frame interpolation or speed change.
 
-本轮从外部论文主页重新调研，并整体替换上一版视觉设计；未参考工作区其他 demo。详细观察、设计取舍与验证记录见 [DESIGN_REFERENCES.md](DESIGN_REFERENCES.md)。
+Video previews load when visible and pause offscreen. The page respects reduced-motion
+preferences and works on desktop and mobile. Numerical results are recorded in
+`index.html`; prompts and per-case measurements are in `assets/cases.js`.
 
-- TokenFlow：https://diffusion-tokenflow.github.io/
-- RAVE：https://rave-video.github.io/
-- FlowEdit：https://matankleiner.github.io/flowedit/
-- Dreamix：https://dreamix-video-editing.github.io/
+| Path | Purpose |
+| --- | --- |
+| `index.html`, `styles.css`, `app.js` | Static project page and interactions |
+| `assets/cases.js` | Generated case catalog, prompts, and media mapping |
+| `assets/provenance.json` | Original/web video geometry and timing metadata |
+| `assets/videos/`, `assets/posters/` | Published clips and preview images |
+| `edit.py`, `wan/` | Research inference implementation |
+| `serve.py` | Standard-library local preview server |
+| `scripts/prepare_assets.py` | Rebuild publication assets from original research inputs |
+| `scripts/validate.py`, `tests/` | Offline integrity checks and behavior tests |
 
-Manrope 字体本地自托管，授权见 `assets/fonts/OFL.txt`。页面不请求外部字体、脚本或视频服务。
+## Validation
+
+```sh
+python3 scripts/validate.py
+python3 -m unittest discover -s tests -v
+node --check app.js
+node --check assets/cases.js
+```
+
+Node.js 22+ is needed only for JavaScript syntax checks. The validator checks local links,
+HTML anchors, case IDs, media mappings, and metadata against provenance. Tests cover real
+HTTP range requests and rejection of corrupted data. GitHub Actions runs these checks on
+pushes and pull requests without installing GPU dependencies.
+
+For a sparse checkout, run `python3 scripts/validate.py --tracked-assets`: this verifies
+omitted media paths against the Git index. Default validation verifies files on disk.
+Neither mode replaces playing new clips or independently inspecting their binary metadata.
+
+## Updating and deploying
+
+See [the asset workflow](docs/ASSETS.md) for configurable source paths, original inputs,
+FFmpeg/FFprobe requirements, and validation before replacing media. The generation script
+requires unpublished research workspace inputs that are not bundled in this repository.
+Do not run it just to preview the site.
+
+GitHub Pages currently publishes `main` from the repository root. Keep `.nojekyll` and
+relative asset paths. Other static hosts can serve the same files without a build step.
+The CI workflow checks the repository; it does not change deployment configuration.
+
+## Research implementation and attribution
+
+See [inference setup](docs/INFERENCE.md) for dependencies, checkpoints, and example commands.
+Static checks do not reproduce GPU inference or verify the full benchmark. The PDF remains
+an anonymous manuscript; author names, arXiv IDs, DOI, and BibTeX are not fabricated here.
+Use the published paper for method details and update citation metadata when available.
+
+The original design references are preserved in [DESIGN_REFERENCES.md](DESIGN_REFERENCES.md).
+Manrope is self-hosted under the [SIL Open Font License](assets/fonts/OFL.txt).
+There is no repository-wide reuse license yet; see [license status](LICENSE_STATUS.md).
+For maintenance changes, follow [CONTRIBUTING.md](CONTRIBUTING.md).

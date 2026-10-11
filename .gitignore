@@ -4,3 +4,13 @@ __pycache__/
 .venv/
 .env
 .DS_Store
+node_modules/
+coverage/
+.env.*
+!.env.example
+*.log
+outputs/
+checkpoints/
+*.safetensors
+*.pth
+*.pt

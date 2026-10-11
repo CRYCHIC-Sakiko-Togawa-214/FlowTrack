@@ -1,0 +1,45 @@
+name: Repository checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: checks-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /*
+            !/assets/videos/
+            !/assets/posters/
+            !/assets/FlowTrack-code.zip
+            !/assets/FlowTrack-paper.pdf
+            !/assets/fonts/Manrope.ttf
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate data and local links
+        run: python3 scripts/validate.py --tracked-assets
+      - name: Check JavaScript syntax
+        run: |
+          node --check app.js
+          node --check assets/cases.js
+      - name: Compile Python sources
+        run: python3 -m compileall -q edit.py wan serve.py scripts tests
+      - name: Test preview server and validators
+        run: python3 -m unittest discover -s tests -v

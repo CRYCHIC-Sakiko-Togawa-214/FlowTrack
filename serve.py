@@ -19,12 +19,10 @@ class RangeHandler(SimpleHTTPRequestHandler):
         match = re.fullmatch(r"bytes=(\d*)-(\d*)", requested.strip())
         size = path.stat().st_size
         if not match or not size:
-            self.send_error(416, "Unsupported byte range")
-            return None
+            return self.unsatisfiable(size)
         first, last = match.groups()
         if not first and not last:
-            self.send_error(416, "Empty byte range")
-            return None
+            return self.unsatisfiable(size)
         if first:
             start = int(first)
             end = min(int(last) if last else size - 1, size - 1)
@@ -32,11 +30,7 @@ class RangeHandler(SimpleHTTPRequestHandler):
             start = max(0, size - int(last))
             end = size - 1
         if start >= size or start > end:
-            self.send_response(416)
-            self.send_header("Content-Range", f"bytes */{size}")
-            self.send_header("Content-Length", "0")
-            self.end_headers()
-            return None
+            return self.unsatisfiable(size)
         source = path.open("rb")
         source.seek(start)
         self.remaining = end - start + 1
@@ -47,6 +41,13 @@ class RangeHandler(SimpleHTTPRequestHandler):
         self.send_header("Last-Modified", self.date_time_string(path.stat().st_mtime))
         self.end_headers()
         return source
+
+    def unsatisfiable(self, size):
+        self.send_response(416)
+        self.send_header("Content-Range", f"bytes */{size}")
+        self.send_header("Content-Length", "0")
+        self.end_headers()
+        return None
 
     def end_headers(self):
         self.send_header("Accept-Ranges", "bytes")
@@ -76,4 +77,6 @@ if __name__ == "__main__":
     try:
         server.serve_forever()
     except KeyboardInterrupt:
+        pass
+    finally:
         server.server_close()
