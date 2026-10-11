@@ -1,92 +1,124 @@
 # FlowTrack
 
-**Controlling Edit-Signal Execution in Inversion-Free Flow Video Editing**
+### Controlling Edit-Signal Execution in Inversion-Free Flow Video Editing
 
-[![Repository checks](https://github.com/CRYCHIC-Sakiko-Togawa-214/FlowTrack/actions/workflows/ci.yml/badge.svg)](https://github.com/CRYCHIC-Sakiko-Togawa-214/FlowTrack/actions/workflows/ci.yml)
-[![Demo](https://img.shields.io/badge/demo-GitHub%20Pages-blue)](https://crychic-sakiko-togawa-214.github.io/FlowTrack/)
+[Project page](https://crychic-sakiko-togawa-214.github.io/FlowTrack/) ·
+[Code](https://github.com/CRYCHIC-Sakiko-Togawa-214/FlowTrack)
 
-A self-contained research project page with synchronized source/FlowTrack video previews,
-category filters, a method overview, and FiVE-Bench region-aware evaluation results.
-The repository also includes the Python research implementation in `edit.py` and `wan/`.
+FlowTrack is a training-free, inversion-free video editing method built on Wan2.1.
+It carries the edit signal across denoising steps and uses a support-aware execution
+cost to control where that signal is applied.
 
-**[Live demo](https://crychic-sakiko-togawa-214.github.io/FlowTrack/)** ·
-**[Paper](assets/FlowTrack-paper.pdf)** · **[Implementation](docs/INFERENCE.md)**
+This repository contains the method implementation and inference entry point.
 
-## Quick start
+## Installation
 
-The website needs only Python 3.9+ and a modern browser. No npm installation, frontend
-build, model checkpoint, or GPU is required to view the demo.
+Use Python 3.10+ on Linux with an NVIDIA GPU. Create an environment, install a
+CUDA-compatible PyTorch/torchvision pair from [PyTorch](https://pytorch.org/get-started/locally/),
+then install the remaining dependencies:
 
-```sh
+```bash
 git clone --depth 1 https://github.com/CRYCHIC-Sakiko-Togawa-214/FlowTrack.git
 cd FlowTrack
-python3 serve.py
+conda create -n flowtrack python=3.11 -y
+conda activate flowtrack
+# Install matching CUDA-enabled torch and torchvision for your machine.
+pip install -r requirements.txt
 ```
 
-Open <http://127.0.0.1:8765/>. Use `--port 8080` for another port. The local server
-supports byte-range requests for video seeking and binds to loopback by default.
-The clone includes large research media; use a sparse checkout for source-only maintenance.
+The supported model is **Wan2.1 T2V 1.3B**. Download the checkpoint from
+[Wan-AI/Wan2.1-T2V-1.3B](https://huggingface.co/Wan-AI/Wan2.1-T2V-1.3B) and retain
+its original directory layout. Point `--ckpt_dir` at that directory; the model
+weights are not bundled in this repository.
 
-## What is included
+The main attention path falls back to PyTorch SDPA. FlashAttention and `xfuser`
+are optional extensions for compatible attention and multi-GPU configurations;
+install them separately if using those paths. Prompt expansion requires its
+corresponding model or service, and is disabled by default.
 
-The published catalog has **37 curated cases** and **74 paired videos**, covering subject,
-creative, color, material, and addition edits. These are selected qualitative results,
-not the complete evaluation dataset. Each source/result pair has matching resolution,
-frame rate, frame count, and duration. Delivery videos use H.264 CRF 22 with faststart;
-there is no frame interpolation or speed change.
+## Video editing
 
-Video previews load when visible and pause offscreen. The page respects reduced-motion
-preferences and works on desktop and mobile. Numerical results are recorded in
-`index.html`; prompts and per-case measurements are in `assets/cases.js`.
-
-| Path | Purpose |
-| --- | --- |
-| `index.html`, `styles.css`, `app.js` | Static project page and interactions |
-| `assets/cases.js` | Generated case catalog, prompts, and media mapping |
-| `assets/provenance.json` | Original/web video geometry and timing metadata |
-| `assets/videos/`, `assets/posters/` | Published clips and preview images |
-| `edit.py`, `wan/` | Research inference implementation |
-| `serve.py` | Standard-library local preview server |
-| `scripts/prepare_assets.py` | Rebuild publication assets from original research inputs |
-| `scripts/validate.py`, `tests/` | Offline integrity checks and behavior tests |
-
-## Validation
-
-```sh
-python3 scripts/validate.py
-python3 -m unittest discover -s tests -v
-node --check app.js
-node --check assets/cases.js
+```bash
+mkdir -p outputs
+python edit.py \
+  --task t2v-1.3B \
+  --size '832*480' \
+  --ckpt_dir /path/to/Wan2.1-T2V-1.3B \
+  --video_dir /path/to/videos \
+  --video_name example.mp4 \
+  --prompt 'A description of the source video.' \
+  --tgt_prompt 'A description of the desired edited video.' \
+  --save_file outputs/edited.mp4 \
+  --base_seed 42 \
+  --use_flowtrack true \
+  --flowtrack_lambda 0.20
 ```
 
-Node.js 22+ is needed only for JavaScript syntax checks. The validator checks local links,
-HTML anchors, case IDs, media mappings, and metadata against provenance. Tests cover real
-HTTP range requests and rejection of corrupted data. GitHub Actions runs these checks on
-pushes and pull requests without installing GPU dependencies.
+Supported sizes are `832*480` and `480*832`; set `--size` explicitly. The single-video
+loader samples up to 41 frames and resizes to `832×480`. It is intended as an editing
+entry point; use dataset mode below for source-resolution evaluation.
 
-For a sparse checkout, run `python3 scripts/validate.py --tracked-assets`: this verifies
-omitted media paths against the Git index. Default validation verifies files on disk.
-Neither mode replaces playing new clips or independently inspecting their binary metadata.
+### Dataset mode
 
-## Updating and deploying
+Prepare a JSON list of editing records. `video_name` omits the `.mp4` extension:
 
-See [the asset workflow](docs/ASSETS.md) for configurable source paths, original inputs,
-FFmpeg/FFprobe requirements, and validation before replacing media. The generation script
-requires unpublished research workspace inputs that are not bundled in this repository.
-Do not run it just to preview the site.
+```json
+[
+  {
+    "video_name": "example",
+    "source_prompt": "A description of the source video.",
+    "target_prompt": "A description of the desired edited video."
+  }
+]
+```
 
-GitHub Pages currently publishes `main` from the repository root. Keep `.nojekyll` and
-relative asset paths. Other static hosts can serve the same files without a build step.
-The CI workflow checks the repository; it does not change deployment configuration.
+```bash
+python edit.py \
+  --task t2v-1.3B --size '832*480' \
+  --ckpt_dir /path/to/Wan2.1-T2V-1.3B \
+  --FiVE_dataset_json /path/to/edit1_prompts.json \
+  --data_dir /path/to/source-videos \
+  --save_dir outputs \
+  --base_seed 42 --use_flowtrack true --flowtrack_lambda 0.20
+```
 
-## Research implementation and attribution
+Dataset mode reads `<data_dir>/<video_name>.mp4`. It uses source FPS and frame count,
+rounds spatial dimensions down to multiples of 16 if required, pads the model input
+to `4n+1` frames, and crops saved output back to the original count. Existing output
+files are skipped. Filters include `--video_names`, `--indices`, `--start_index`,
+`--max_items`, `--num_shards`, and `--shard_id`.
 
-See [inference setup](docs/INFERENCE.md) for dependencies, checkpoints, and example commands.
-Static checks do not reproduce GPU inference or verify the full benchmark. The PDF remains
-an anonymous manuscript; author names, arXiv IDs, DOI, and BibTeX are not fabricated here.
-Use the published paper for method details and update citation metadata when available.
+### Method options
 
-The original design references are preserved in [DESIGN_REFERENCES.md](DESIGN_REFERENCES.md).
-Manrope is self-hosted under the [SIL Open Font License](assets/fonts/OFL.txt).
-There is no repository-wide reuse license yet; see [license status](LICENSE_STATUS.md).
-For maintenance changes, follow [CONTRIBUTING.md](CONTRIBUTING.md).
+| Option | Default | Purpose |
+| --- | --- | --- |
+| `--flowtrack_lambda` | `0.20` | Strength of causal edit-signal memory |
+| `--flowtrack_state_mode` | `otsu` | State cost: `otsu`, `none`, or `uniform` |
+| `--flowtrack_memory_mode` | `pre` | Pre-execution memory; `none` for the ablation |
+| `--flowtrack_log_stats` | `false` | Record controller diagnostics |
+| `--sample_steps` | `50` | Denoising steps |
+| `--sample_shift` | `5.0` | Flow sampling shift |
+
+Use `python edit.py --help` for the complete CLI. The configuration above follows
+code defaults; retain the paper's exact prompts, seeds, data, and environment when
+reproducing experiments. Benchmark data, metric implementations, and model weights
+must be obtained separately. The code check in CI verifies Python syntax, not GPU
+inference or benchmark results.
+
+## Code structure
+
+```text
+edit.py                 # Single-video and dataset editing entry point
+wan/text2video.py       # Wan pipeline and FlowTrack execution controller
+wan/configs/            # Model and sampling configuration
+wan/modules/            # Backbone, text encoder, and VAE
+wan/utils/              # Solvers, I/O, and prompt utilities
+wan/distributed/        # Optional distributed inference support
+requirements.txt
+```
+
+## Acknowledgements
+
+The backbone implementation is adapted from [Wan2.1](https://github.com/Wan-Video/Wan2.1).
+Its Apache 2.0 license is retained in [wan/LICENSE.txt](wan/LICENSE.txt).
+Publication metadata and a BibTeX entry will be added when the paper is publicly available.

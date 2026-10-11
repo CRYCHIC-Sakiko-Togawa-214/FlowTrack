@@ -1,0 +1,5 @@
+The Wan model implementation is adapted from Wan2.1 (Wan-Video/Wan2.1),
+released under the Apache License 2.0; see LICENSE.txt in this directory.
+FlowTrack-specific execution control is implemented in text2video.py.
+This notice attributes the upstream components; it does not assign a new
+repository-wide license to the FlowTrack research contribution.
